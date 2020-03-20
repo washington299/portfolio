@@ -17,9 +17,9 @@
 
 ## bibliotecas do projeto
 
-- React-hook-Form.
-- React-burger-menu.
-- Styled-components.
+- React-hook-Form. ✅
+- React-burger-menu. ✅
+- Styled-components. ✅
 
 ## bibliotecas para estilo de código
 
