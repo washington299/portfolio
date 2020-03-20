@@ -23,8 +23,8 @@
 
 ## bibliotecas para estilo de código
 
-- git-commit-msg-linter.
-- eslint.
-- prettier.
-- husky.
-- lint-staged.
+- git-commit-msg-linter. ✅
+- eslint. ✅
+- prettier. ✅
+- husky. ✅
+- lint-staged. ✅
