@@ -24,6 +24,7 @@
     ],
     "rules": {
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-        "react/react-in-jsx-scope": "off"
+        "arrow-parens": "off",
+        "react/jsx-props-no-spreading": "off"
     }
 }
