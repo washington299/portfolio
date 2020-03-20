@@ -1,5 +1,5 @@
 function projects() {
-  return <div>Hello projects</div>
+  return <div>Hello projects</div>;
 }
 
 export default projects;
