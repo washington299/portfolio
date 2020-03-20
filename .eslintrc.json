@@ -25,6 +25,8 @@
     "rules": {
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "arrow-parens": "off",
-        "react/jsx-props-no-spreading": "off"
+        "react/jsx-props-no-spreading": "off",
+        "react/prop-types": "off",
+        "jsx-a11y/anchor-is-valid": "off"
     }
 }
