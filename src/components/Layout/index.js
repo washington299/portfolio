@@ -2,6 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
+import GlobalStyles from '../utils/globalStyles';
+
 const Layout = ({ title = 'Washington Campos', children }) => (
   <div>
     <Head>
@@ -10,6 +12,7 @@ const Layout = ({ title = 'Washington Campos', children }) => (
       <link rel="icon" href="favicon.ico" />
       <title>{title}</title>
     </Head>
+    <GlobalStyles />
     <nav>
       <Link href="/">
         <a>HOME</a>
