@@ -2,9 +2,11 @@ import React from 'react';
 
 import Layout from '../../src/components/Layout';
 
+import { PageStyle } from '../../src/components/utils/globalStyles';
+
 const Skills = () => (
   <Layout title="Skills">
-    <div>My Skills</div>
+    <PageStyle>My Skills</PageStyle>
   </Layout>
 );
 

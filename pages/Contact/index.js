@@ -2,9 +2,11 @@ import React from 'react';
 
 import Layout from '../../src/components/Layout';
 
+import { PageStyle } from '../../src/components/utils/globalStyles';
+
 const Contact = () => (
   <Layout title="Contact me">
-    <div>Contact me</div>
+    <PageStyle>Contact me</PageStyle>
   </Layout>
 );
 

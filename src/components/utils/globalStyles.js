@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import { defaultBackground, defaultFont } from './themes';
 
 export default createGlobalStyle`
@@ -13,4 +13,10 @@ export default createGlobalStyle`
     color: ${defaultFont};
     font-family: 'Roboto', sans-serif;
   }
+`;
+
+
+export const PageStyle = styled.div`
+  flex: 1;
+  background-color: #ff0000;
 `;
