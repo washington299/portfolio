@@ -20,6 +20,7 @@
 - React-hook-Form. ✅
 - React-burger-menu. ✅
 - Styled-components. ✅
+- Styled-theming. ✅
 
 ## bibliotecas para estilo de código
 
