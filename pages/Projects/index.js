@@ -1,7 +1,11 @@
 import React from 'react';
 
-function projects() {
-  return <div>Hello projects</div>;
-}
+import Layout from '../../src/components/Layout';
+
+const projects = () => (
+  <Layout>
+    <div>Hello projects</div>
+  </Layout>
+);
 
 export default projects;
