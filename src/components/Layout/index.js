@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import { ThemeProvider } from 'styled-components';
 
 import Sidebar from '../Sidebar';
@@ -9,6 +10,7 @@ import App from './styles';
 
 const Layout = ({ title = 'Washington Campos', children }) => {
   const [theme, setTheme] = useState({ mode: 'dark' });
+  const router = useRouter();
   console.log(setTheme);
 
   return (
@@ -26,7 +28,7 @@ const Layout = ({ title = 'Washington Campos', children }) => {
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         <App>
-          <Sidebar />
+          <Sidebar path={router.pathname} />
           {children}
         </App>
       </ThemeProvider>

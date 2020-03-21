@@ -4,32 +4,32 @@ import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 import Navbar from './styles';
 
-const Sidebar = () => (
+const Sidebar = ({ path }) => (
   <Navbar>
     <div className="avatar-img">
       <img src="/assets/avatar-light.png" alt="avatar-light.png" />
     </div>
     <ul>
-      <li>
-        <Link href="/">
+      <Link href="/">
+        <li className={path === '/' ? 'active-router' : ''}>
           <a>HOME</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/">
+        </li>
+      </Link>
+      <Link href="/projects">
+        <li className={path === '/projects' ? 'active-router' : ''}>
           <a>PROJECTS</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/">
+        </li>
+      </Link>
+      <Link href="/skills">
+        <li className={path === '/skills' ? 'active-router' : ''}>
           <a>SKILLS</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/">
+        </li>
+      </Link>
+      <Link href="/contact">
+        <li className={path === '/contact' ? 'active-router' : ''}>
           <a>CONTACT</a>
-        </Link>
-      </li>
+        </li>
+      </Link>
     </ul>
     <div className="social-media-icons">
       <a

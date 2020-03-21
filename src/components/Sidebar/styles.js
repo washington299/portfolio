@@ -29,11 +29,13 @@ export default styled.nav`
     list-style: none;
     cursor: pointer;
   }
+  .active-router {
+    background-color: ${defaultBackground};
+    border-left: 7px solid ${SecondFont};
+  }
   li {
     text-align: center;
     padding: 20px 0;
-    background-color: ${defaultBackground};
-    border-left: 7px solid ${SecondFont};
     font-weight: 600;
 
     a {
