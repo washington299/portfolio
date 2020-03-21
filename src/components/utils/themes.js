@@ -2,12 +2,12 @@ import theme from 'styled-theming';
 
 export const defaultBackground = theme('mode', {
   light: '#ecf2f8',
-  dark: '#20232a',
+  dark: '#2F3136',
 });
 
 export const secondBackground = theme('mode', {
   light: '#FFFFFF',
-  dark: '#000000',
+  dark: '#202225',
 });
 
 export const defaultFont = theme('mode', {

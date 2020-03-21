@@ -3,6 +3,8 @@ import { createGlobalStyle } from 'styled-components';
 import { defaultBackground, defaultFont } from './themes';
 
 export default createGlobalStyle`
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
   html, body {
     margin: 0;
     padding: 0;
@@ -11,5 +13,6 @@ export default createGlobalStyle`
   body {
     background-color: ${defaultBackground};
     color: ${defaultFont};
+    font-family: 'Roboto', sans-serif;
   }
 `;
