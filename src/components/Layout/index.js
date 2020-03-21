@@ -8,7 +8,7 @@ import Sidebar from '../Sidebar';
 import GlobalStyles from '../utils/globalStyles';
 import App from './styles';
 
-const Layout = ({ title = 'Washington Campos', children }) => {
+const Layout = ({ title, children }) => {
   const [theme, setTheme] = useState({ mode: 'light' });
   const router = useRouter();
   console.log(setTheme);
@@ -23,7 +23,7 @@ const Layout = ({ title = 'Washington Campos', children }) => {
           href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
           rel="stylesheet"
         />
-        <title>{title}</title>
+        <title>{`Washington Campos - ${title}`}</title>
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
