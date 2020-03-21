@@ -9,7 +9,7 @@ import GlobalStyles from '../utils/globalStyles';
 import App from './styles';
 
 const Layout = ({ title = 'Washington Campos', children }) => {
-  const [theme, setTheme] = useState({ mode: 'dark' });
+  const [theme, setTheme] = useState({ mode: 'light' });
   const router = useRouter();
   console.log(setTheme);
 
