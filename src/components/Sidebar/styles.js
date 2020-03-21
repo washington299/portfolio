@@ -7,7 +7,7 @@ import {
 
 export default styled.nav`
   width: 250px;
-  height: 100vh;
+  height: 100%;
   background-color: ${secondBackground};
   box-shadow: 1px 0 3px #aaa;
 

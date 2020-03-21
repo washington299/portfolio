@@ -5,9 +5,10 @@ import { ThemeProvider } from 'styled-components';
 import Sidebar from '../Sidebar';
 
 import GlobalStyles from '../utils/globalStyles';
+import App from './styles';
 
 const Layout = ({ title = 'Washington Campos', children }) => {
-  const [theme, setTheme] = useState({ mode: 'light' });
+  const [theme, setTheme] = useState({ mode: 'dark' });
   console.log(setTheme);
 
   return (
@@ -24,8 +25,10 @@ const Layout = ({ title = 'Washington Campos', children }) => {
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <Sidebar />
-        {children}
+        <App>
+          <Sidebar />
+          {children}
+        </App>
       </ThemeProvider>
     </div>
   );
