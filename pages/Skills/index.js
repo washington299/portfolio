@@ -1,12 +1,16 @@
 import React from 'react';
 
 import Layout from '../../src/components/Layout';
+import Header from '../../src/components/Header';
 
 import { PageStyle } from '../../src/components/utils/globalStyles';
 
 const Skills = () => (
   <Layout title="Skills">
-    <PageStyle>My Skills</PageStyle>
+    <PageStyle>
+      <Header />
+      <div>Skills Page</div>
+    </PageStyle>
   </Layout>
 );
 
