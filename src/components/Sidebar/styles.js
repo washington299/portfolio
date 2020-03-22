@@ -10,7 +10,6 @@ export default styled.nav`
   height: 100%;
   background-color: ${secondBackground};
   box-shadow: 1px 0 3px #aaa;
-  position: fixed;
 
   .avatar-img {
     width: 130px;
@@ -62,5 +61,6 @@ export default styled.nav`
 
   @media only screen and (max-width: 700px) {
     display: ${props => props.display};
+    position: fixed;
   }
 `;
