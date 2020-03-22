@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 import { useOpenSidebar } from '../utils/menuContext';
+import MenuMobile from '../MenuMobile';
 
 import Navbar from './styles';
 
@@ -11,6 +12,7 @@ const Sidebar = ({ path }) => {
 
   return (
     <Navbar display={openSidebar ? 'block' : 'none'}>
+      <MenuMobile />
       <div className="avatar-img">
         <img src="/assets/avatar-light.png" alt="avatar-light.png" />
       </div>

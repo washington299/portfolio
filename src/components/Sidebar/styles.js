@@ -6,7 +6,6 @@ import {
 } from '../utils/themes';
 
 export default styled.nav`
-  display: ${props => props.display};
   width: 250px;
   height: 100%;
   background-color: ${secondBackground};
