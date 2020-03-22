@@ -19,7 +19,7 @@ export const PageStyle = styled.div`
   flex: 1;
 `;
 
-export const Header = styled.header`
+export const HeaderStyle = styled.header`
   height: 50px;
 
   @media only screen and (max-width: 700px) {
