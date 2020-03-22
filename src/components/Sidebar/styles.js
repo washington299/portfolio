@@ -3,7 +3,7 @@ import {
   secondBackground,
   SecondFont,
   defaultBackground,
-} from '../utils/themes';
+} from '../../utils/themes';
 
 export default styled.nav`
   width: 250px;

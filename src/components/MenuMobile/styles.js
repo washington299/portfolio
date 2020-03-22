@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { SecondFont } from '../utils/themes';
+import { SecondFont } from '../../utils/themes';
 
 export default styled.div`
   width: 50px;
