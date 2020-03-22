@@ -6,6 +6,7 @@ import {
 } from '../utils/themes';
 
 export default styled.nav`
+  display: ${props => props.display};
   width: 250px;
   height: 100%;
   background-color: ${secondBackground};
@@ -60,6 +61,6 @@ export default styled.nav`
   }
 
   @media only screen and (max-width: 700px) {
-    display: none;
+    display: ${props => props.display};
   }
 `;

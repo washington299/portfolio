@@ -3,13 +3,14 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { ThemeProvider } from 'styled-components';
 
+import SidebarProvider from '../utils/menuContext';
 import Sidebar from '../Sidebar';
 
 import GlobalStyles from '../utils/globalStyles';
 import App from './styles';
 
 const Layout = ({ title, children }) => {
-  const [theme, setTheme] = useState({ mode: 'light' });
+  const [theme, setTheme] = useState({ mode: 'dark' });
   const router = useRouter();
   console.log(setTheme);
 
@@ -25,13 +26,15 @@ const Layout = ({ title, children }) => {
         />
         <title>{`Washington Campos - ${title}`}</title>
       </Head>
-      <ThemeProvider theme={theme}>
-        <GlobalStyles />
-        <App>
-          <Sidebar path={router.pathname} />
-          {children}
-        </App>
-      </ThemeProvider>
+      <SidebarProvider>
+        <ThemeProvider theme={theme}>
+          <GlobalStyles />
+          <App>
+            <Sidebar path={router.pathname} />
+            {children}
+          </App>
+        </ThemeProvider>
+      </SidebarProvider>
     </div>
   );
 };

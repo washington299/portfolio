@@ -1,20 +1,14 @@
 import React from 'react';
 
 import Layout from '../../src/components/Layout';
+import Header from '../../src/components/Header';
 
-import { PageStyle, Header } from '../../src/components/utils/globalStyles';
-import MenuMobile from './styles';
+import { PageStyle } from '../../src/components/utils/globalStyles';
 
 const HomePage = () => (
   <Layout title="Home">
     <PageStyle>
-      <Header>
-        <MenuMobile>
-          <span />
-          <span />
-          <span />
-        </MenuMobile>
-      </Header>
+      <Header />
       <div>Home Page</div>
     </PageStyle>
   </Layout>
