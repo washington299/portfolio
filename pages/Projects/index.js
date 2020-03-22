@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '../../src/components/Layout';
 import Header from '../../src/components/Header';
 
-import { PageStyle } from '../../src/components/utils/globalStyles';
+import { PageStyle } from '../../src/utils/globalStyles';
 
 const projects = () => (
   <Layout title="Projects">

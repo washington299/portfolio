@@ -3,10 +3,10 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { ThemeProvider } from 'styled-components';
 
-import SidebarProvider from '../utils/menuContext';
 import Sidebar from '../Sidebar';
+import SidebarProvider from '../../utils/menuContext';
 
-import GlobalStyles from '../utils/globalStyles';
+import GlobalStyles from '../../utils/globalStyles';
 import App from './styles';
 
 const Layout = ({ title, children }) => {

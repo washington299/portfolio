@@ -2,7 +2,7 @@ import React from 'react';
 
 import MenuMobile from '../MenuMobile';
 
-import { HeaderStyle } from '../utils/globalStyles';
+import { HeaderStyle } from '../../utils/globalStyles';
 
 const Header = () => (
   <HeaderStyle>
