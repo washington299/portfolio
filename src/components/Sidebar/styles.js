@@ -58,4 +58,8 @@ export default styled.nav`
       margin: 0 10px;
     }
   }
+
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
 `;

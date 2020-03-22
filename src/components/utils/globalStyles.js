@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import styled, { createGlobalStyle } from 'styled-components';
-import { defaultBackground, defaultFont } from './themes';
+import { defaultBackground, secondBackground, defaultFont } from './themes';
 
 export default createGlobalStyle`
   html, body {
@@ -15,8 +15,15 @@ export default createGlobalStyle`
   }
 `;
 
-
 export const PageStyle = styled.div`
   flex: 1;
-  background-color: #ff0000;
+`;
+
+export const Header = styled.header`
+  height: 50px;
+
+  @media only screen and (max-width: 700px) {
+    display: flex;
+    background-color: ${secondBackground};
+  }
 `;
