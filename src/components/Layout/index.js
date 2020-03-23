@@ -5,14 +5,14 @@ import { ThemeProvider } from 'styled-components';
 
 import Sidebar from '../Sidebar';
 import SidebarProvider from '../../utils/menuContext';
-import { useTheme } from '../../utils/switchContext';
 
 import GlobalStyles from '../../utils/globalStyles';
 import App from './styles';
+import { useTheme } from '../../utils/switchContext';
 
 const Layout = ({ title, children }) => {
-  const { colorTheme } = useTheme();
   const router = useRouter();
+  const { colorTheme } = useTheme();
 
   return (
     <div>

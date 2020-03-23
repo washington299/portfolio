@@ -1,8 +1,8 @@
 import React from 'react';
 import Switch from 'react-switch';
 
-import { useTheme } from '../../utils/switchContext';
 import MenuMobile from '../MenuMobile';
+import { useTheme } from '../../utils/switchContext';
 
 import { HeaderStyle } from '../../utils/globalStyles';
 import SwitchIconStyle from './styles';
@@ -11,11 +11,7 @@ const Header = () => {
   const { colorTheme, setColorTheme } = useTheme();
 
   function changeTheme() {
-    if (colorTheme === 'light') {
-      setColorTheme('dark');
-      return;
-    }
-    setColorTheme('light');
+    setColorTheme(colorTheme === 'light' ? 'dark' : 'light');
   }
 
   return (
