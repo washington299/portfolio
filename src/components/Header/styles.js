@@ -5,7 +5,6 @@ export default styled.div`
   margin: auto;
   display: flex;
   align-items: center;
-  z-index: -999;
 
   span {
     color: ${defaultFont};
