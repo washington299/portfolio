@@ -1,13 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Switch from 'react-switch';
 
+import { useTheme } from '../../utils/switchContext';
 import MenuMobile from '../MenuMobile';
 
 import { HeaderStyle } from '../../utils/globalStyles';
 import SwitchIconStyle from './styles';
 
 const Header = () => {
-  const [toggleSwitch, setToggleSwitch] = useState(false);
+  const { colorTheme, setColorTheme } = useTheme();
+
+  function changeTheme() {
+    if (colorTheme === 'light') {
+      setColorTheme('dark');
+      return;
+    }
+    setColorTheme('light');
+  }
 
   return (
     <HeaderStyle>
@@ -15,14 +24,14 @@ const Header = () => {
       <SwitchIconStyle>
         <span>Light</span>
         <Switch
-          checked={toggleSwitch}
+          onChange={changeTheme}
+          checked={colorTheme !== 'light'}
           uncheckedIcon={false}
           checkedIcon={false}
           offColor="#FFFFFF"
           onColor="#000000"
           offHandleColor="#000000"
           onHandleColor="#FFFFFF"
-          onChange={() => setToggleSwitch(!toggleSwitch)}
         />
         <span>Dark</span>
       </SwitchIconStyle>
