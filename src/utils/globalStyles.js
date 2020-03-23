@@ -20,10 +20,12 @@ export const PageStyle = styled.div`
 `;
 
 export const HeaderStyle = styled.header`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 50px;
 
   @media only screen and (max-width: 700px) {
-    display: flex;
     background-color: ${secondBackground};
   }
 `;

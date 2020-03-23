@@ -9,7 +9,6 @@ export default styled.div`
   justify-content: space-evenly;
   padding-left: 10px;
   cursor: pointer;
-  position: absolute;
   z-index: 999;
 
   span {
