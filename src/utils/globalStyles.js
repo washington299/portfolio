@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import styled, { createGlobalStyle } from 'styled-components';
-import { defaultBackground, secondBackground, defaultFont } from './themes';
+import { defaultBackground, defaultFont } from './themes';
 
 export default createGlobalStyle`
   html, body {
@@ -24,8 +24,4 @@ export const HeaderStyle = styled.header`
   justify-content: space-between;
   align-items: center;
   height: 50px;
-
-  @media only screen and (max-width: 700px) {
-    background-color: ${secondBackground};
-  }
 `;

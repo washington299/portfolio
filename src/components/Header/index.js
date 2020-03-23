@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Switch from 'react-switch';
-import { IoIosSunny, IoIosMoon } from 'react-icons/io';
 
 import MenuMobile from '../MenuMobile';
 
@@ -14,7 +13,7 @@ const Header = () => {
     <HeaderStyle>
       <MenuMobile />
       <SwitchIconStyle>
-        <IoIosSunny size={28} style={{ marginRight: 10, color: '#FFA500' }} />
+        <span>Light</span>
         <Switch
           checked={toggleSwitch}
           uncheckedIcon={false}
@@ -25,7 +24,7 @@ const Header = () => {
           onHandleColor="#FFFFFF"
           onChange={() => setToggleSwitch(!toggleSwitch)}
         />
-        <IoIosMoon size={26} style={{ marginLeft: 10, color: '#FFF' }} />
+        <span>Dark</span>
       </SwitchIconStyle>
     </HeaderStyle>
   );
