@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { ThemeProvider } from 'styled-components';
 
 import Sidebar from '../Sidebar';
 import SidebarProvider from '../../utils/menuContext';
+import { useTheme } from '../../utils/switchContext';
 
 import GlobalStyles from '../../utils/globalStyles';
 import App from './styles';
 
 const Layout = ({ title, children }) => {
-  const [theme, setTheme] = useState({ mode: 'light' });
+  const { colorTheme } = useTheme();
   const router = useRouter();
-  console.log(setTheme);
 
   return (
     <div>
@@ -27,7 +27,7 @@ const Layout = ({ title, children }) => {
         <title>{`Washington Campos - ${title}`}</title>
       </Head>
       <SidebarProvider>
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={{ mode: colorTheme }}>
           <GlobalStyles />
           <App>
             <Sidebar path={router.pathname} />
