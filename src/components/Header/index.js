@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Switch from 'react-switch';
+import Cookies from 'js-cookie';
 
 import MenuMobile from '../MenuMobile';
 import { useTheme } from '../../utils/switchContext';
@@ -10,9 +11,9 @@ import SwitchIconStyle from './styles';
 const Header = () => {
   const { colorTheme, setColorTheme } = useTheme();
 
-  // useEffect(() => {
-  //   Cookies.set('mode', colorTheme);
-  // }, [colorTheme]);
+  useEffect(() => {
+    Cookies.set('mode', colorTheme, { expires: 1 });
+  }, [colorTheme]);
 
   function changeTheme() {
     setColorTheme(colorTheme === 'light' ? 'dark' : 'light');

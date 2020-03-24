@@ -3,16 +3,16 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { ThemeProvider } from 'styled-components';
 
-import useStorage from '../../helpers/useStorage';
 import Sidebar from '../Sidebar';
 import SidebarProvider from '../../utils/menuContext';
 
 import GlobalStyles from '../../utils/globalStyles';
 import App from './styles';
+import { useTheme } from '../../utils/switchContext';
 
 const Layout = ({ title, children }) => {
   const router = useRouter();
-  const theme = useStorage();
+  const { colorTheme } = useTheme();
 
   return (
     <div>
@@ -26,15 +26,15 @@ const Layout = ({ title, children }) => {
         />
         <title>{`Washington Campos - ${title}`}</title>
       </Head>
-      <SidebarProvider>
-        <ThemeProvider theme={{ mode: theme }}>
+      <ThemeProvider theme={{ mode: colorTheme }}>
+        <SidebarProvider>
           <GlobalStyles />
           <App>
             <Sidebar path={router.pathname} />
             {children}
           </App>
-        </ThemeProvider>
-      </SidebarProvider>
+        </SidebarProvider>
+      </ThemeProvider>
     </div>
   );
 };
