@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import styled, { createGlobalStyle } from 'styled-components';
-import { defaultBackground, defaultFont } from './themes';
+import { defaultBackground, defaultFont, SecondFont } from './themes';
 
 export default createGlobalStyle`
   html, body {
@@ -24,4 +24,15 @@ export const HeaderStyle = styled.header`
   justify-content: space-between;
   align-items: center;
   height: 50px;
+`;
+
+export const Title = styled.span`
+  color: ${SecondFont};
+  font-size: 26px;
+  border-bottom: 5px solid ${SecondFont};
+  padding-bottom: 5px;
+`;
+
+export const ContentArea = styled.div`
+  padding: 30px 50px;
 `;
