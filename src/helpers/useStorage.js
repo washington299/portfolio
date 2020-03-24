@@ -1,5 +1,5 @@
 import Cookies from 'js-cookie';
-import { useTheme } from '../../utils/switchContext';
+import { useTheme } from '../utils/switchContext';
 
 function useStorage() {
   const { colorTheme } = useTheme();

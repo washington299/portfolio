@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { ThemeProvider } from 'styled-components';
 
-import useStorage from '../helpers/useStorage';
+import useStorage from '../../helpers/useStorage';
 import Sidebar from '../Sidebar';
 import SidebarProvider from '../../utils/menuContext';
 
