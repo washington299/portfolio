@@ -20,9 +20,9 @@ const Header = () => {
   }
 
   return (
-    <HeaderStyle>
+    <HeaderStyle className="padding-left">
       <MenuMobile />
-      <SwitchIconStyle>
+      <SwitchIconStyle className="padding-left">
         <span>Light</span>
         <Switch
           onChange={changeTheme}

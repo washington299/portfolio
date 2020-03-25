@@ -1,9 +1,11 @@
 import React from 'react';
 
-import Styles from './styles';
+import { FooterStyle } from '../../utils/globalStyles';
 
 const Footer = () => (
-  <Styles>© Copyright - Todos os direitos reservados.</Styles>
+  <FooterStyle className="padding-left">
+    © Copyright - Todos os direitos reservados.
+  </FooterStyle>
 );
 
 export default Footer;

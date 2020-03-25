@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import styled, { createGlobalStyle } from 'styled-components';
-import { defaultBackground, defaultFont, SecondFont } from './themes';
+import { defaultBackground, defaultFont, SecondFont, secondBackground } from './themes';
 
 export default createGlobalStyle`
   html, body {
@@ -18,6 +18,13 @@ export default createGlobalStyle`
       margin: 30px 0;
     }
   }
+  .padding-left {
+    margin-left: 250px;
+
+    @media only screen and (max-width: 700px) {
+      margin-left: 0;
+    }
+  }
 `;
 
 export const PageStyle = styled.div`
@@ -29,7 +36,6 @@ export const HeaderStyle = styled.header`
   justify-content: space-between;
   align-items: center;
   height: 50px;
-  margin-left: 250px;
 `;
 
 export const Title = styled.span`
@@ -39,6 +45,10 @@ export const Title = styled.span`
   border-bottom: 5px solid ${SecondFont};
   padding-bottom: 5px;
   margin: 30px 50px;
+
+  @media only screen and (max-width: 700px) {
+    text-align: center;
+  }
 `;
 
 export const ContentArea = styled.section`
@@ -46,4 +56,13 @@ export const ContentArea = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+export const FooterStyle = styled.footer`
+  height: 50px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: ${secondBackground};
 `;

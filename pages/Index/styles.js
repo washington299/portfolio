@@ -2,8 +2,6 @@ import styled from 'styled-components';
 import { defaultFont, SecondFont } from '../../src/utils/themes';
 
 export default styled.div`
-  margin-left: 250px;
-
   .home-introduction {
     margin: 15px 0;
     font-size: 20px;
@@ -44,5 +42,13 @@ export default styled.div`
   article a {
     color: ${SecondFont};
     text-decoration: none;
+  }
+
+  @media only screen and (max-width: 700px) {
+    text-align: center;
+
+    .home-star span {
+      width: 100px;
+    }
   }
 `;

@@ -15,7 +15,7 @@ const HomePage = () => (
     <Layout title="Home">
       <PageStyle>
         <Header />
-        <Styles>
+        <Styles className="padding-left">
           <Title>Myself</Title>
           <ContentArea>
             <div className="home-img">
@@ -58,7 +58,7 @@ const HomePage = () => (
               looking for an opportunity to work as a internship or a junior
               developer with these technologies. You can see my projects by
               <Link href="/projects">
-                <a> clicking here:</a>
+                <a> clicking here</a>
               </Link>
             </article>
           </ContentArea>
