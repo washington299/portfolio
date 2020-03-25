@@ -19,7 +19,7 @@ const HomePage = () => (
           <Title>Myself</Title>
           <ContentArea>
             <div className="home-img">
-              <img src="assets/avatar-dark.png" alt="avatar-dark" />
+              <img src="assets/avatar-light.png" alt="avatar-light" />
             </div>
             <span className="home-introduction">
               Hey there, i&apos;m Washington a Junior Javascript developer.
