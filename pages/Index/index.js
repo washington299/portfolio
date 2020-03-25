@@ -15,7 +15,7 @@ const HomePage = () => (
     <Layout title="Home">
       <PageStyle>
         <Header />
-        <Styles className="padding-left">
+        <Styles>
           <Title>Myself</Title>
           <ContentArea>
             <div className="home-img">

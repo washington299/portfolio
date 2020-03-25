@@ -6,7 +6,7 @@ import MenuMobile from '../MenuMobile';
 import { useTheme } from '../../utils/switchContext';
 
 import { HeaderStyle } from '../../utils/globalStyles';
-import SwitchIconStyle from './styles';
+import SwitchIconAreaStyle from './styles';
 
 const Header = () => {
   const { colorTheme, setColorTheme } = useTheme();
@@ -20,9 +20,9 @@ const Header = () => {
   }
 
   return (
-    <HeaderStyle className="padding-left">
+    <HeaderStyle>
       <MenuMobile />
-      <SwitchIconStyle className="padding-left">
+      <SwitchIconAreaStyle>
         <span>Light</span>
         <Switch
           onChange={changeTheme}
@@ -35,7 +35,7 @@ const Header = () => {
           onHandleColor="#FFFFFF"
         />
         <span>Dark</span>
-      </SwitchIconStyle>
+      </SwitchIconAreaStyle>
     </HeaderStyle>
   );
 };

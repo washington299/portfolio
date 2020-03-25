@@ -40,6 +40,10 @@ export default styled.nav`
     padding: 20px 0;
     font-weight: 600;
 
+    &:hover {
+      background-color: ${defaultBackground};
+    }
+
     a {
       color: ${SecondFont};
       text-decoration: none;
@@ -49,8 +53,8 @@ export default styled.nav`
   .social-media-icons {
     display: flex;
     justify-content: center;
-    height: auto;
     align-items: center;
+    height: auto;
     margin-top: 100px;
     text-align: center;
 
@@ -63,6 +67,5 @@ export default styled.nav`
 
   @media only screen and (max-width: 700px) {
     display: ${props => props.display};
-    position: fixed;
   }
 `;

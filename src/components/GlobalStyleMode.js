@@ -1,8 +1,8 @@
 import React from 'react';
-import ThemeProvider from '../utils/switchContext';
+import SwitchProvider from '../utils/switchContext';
 
-const ThemeColorProvider = ({ children }) => (
-  <ThemeProvider>{children}</ThemeProvider>
+const SwitchColorProvider = ({ children }) => (
+  <SwitchProvider>{children}</SwitchProvider>
 );
 
-export default ThemeColorProvider;
+export default SwitchColorProvider;

@@ -9,7 +9,7 @@ export default styled.div`
   justify-content: space-evenly;
   padding-left: 10px;
   cursor: pointer;
-  z-index: 999;
+  z-index: 1;
 
   span {
     width: 40px;
