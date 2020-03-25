@@ -20,6 +20,8 @@
 - React-hook-Form. ✅
 - React-burger-menu. ✅
 - React-icons. ✅
+- React-switch. ✅
+- Js-cookie. ✅
 - Styled-components. ✅
 - Styled-theming. ✅
 
