@@ -5,6 +5,7 @@ import { FaStar, FaHtml5, FaCss3Alt, FaReact, FaNodeJs } from 'react-icons/fa';
 import Global from '../../src/components/GlobalStyleMode';
 import Layout from '../../src/components/Layout';
 import Header from '../../src/components/Header';
+import Footer from '../../src/components/Footer';
 
 import { PageStyle, Title, ContentArea } from '../../src/utils/globalStyles';
 import Styles from './styles';
@@ -62,6 +63,7 @@ const HomePage = () => (
             </article>
           </ContentArea>
         </Styles>
+        <Footer />
       </PageStyle>
     </Layout>
   </Global>
