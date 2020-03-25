@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { FaStar, FaHtml5, FaCss3Alt, FaReact, FaNodeJs } from 'react-icons/fa';
 
-import Global from '../../src/components/GlobalStyleMode';
+import Global from '../../src/components/SwitchProvider';
 import Layout from '../../src/components/Layout';
 import Header from '../../src/components/Header';
 import Footer from '../../src/components/Footer';

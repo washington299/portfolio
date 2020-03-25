@@ -4,8 +4,8 @@ import { useRouter } from 'next/router';
 import { ThemeProvider } from 'styled-components';
 
 import Sidebar from '../Sidebar';
-import SidebarProvider from '../../utils/menuContext';
-import { useTheme } from '../../utils/switchContext';
+import SidebarProvider from '../../utils/Contexts/menuContext';
+import { useTheme } from '../../utils/Contexts/switchContext';
 
 import GlobalStyles from '../../utils/globalStyles';
 import App from './styles';

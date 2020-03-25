@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Global from '../../src/components/GlobalStyleMode';
+import Global from '../../src/components/SwitchProvider';
 import Layout from '../../src/components/Layout';
 import Header from '../../src/components/Header';
 

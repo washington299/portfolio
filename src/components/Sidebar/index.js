@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
-import { useOpenSidebar } from '../../utils/menuContext';
+import { useOpenSidebar } from '../../utils/Contexts/menuContext';
 
 import Navbar from './styles';
 

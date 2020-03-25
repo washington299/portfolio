@@ -3,7 +3,7 @@ import Switch from 'react-switch';
 import Cookies from 'js-cookie';
 
 import MenuMobile from '../MenuMobile';
-import { useTheme } from '../../utils/switchContext';
+import { useTheme } from '../../utils/Contexts/switchContext';
 
 import { HeaderStyle } from '../../utils/globalStyles';
 import SwitchIconAreaStyle from './styles';

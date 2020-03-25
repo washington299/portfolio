@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useOpenSidebar } from '../../utils/menuContext';
+import { useOpenSidebar } from '../../utils/Contexts/menuContext';
 
 import MenuMobileStyles from './styles';
 
