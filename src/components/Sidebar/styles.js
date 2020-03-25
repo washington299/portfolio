@@ -11,6 +11,7 @@ export default styled.nav`
   background-color: ${secondBackground};
   box-shadow: 1px 0 3px #aaa;
   z-index: 1;
+  position: fixed;
 
   .avatar-img {
     width: 130px;

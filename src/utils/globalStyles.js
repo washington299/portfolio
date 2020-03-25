@@ -12,6 +12,11 @@ export default createGlobalStyle`
     background-color: ${defaultBackground};
     color: ${defaultFont};
     font-family: 'Roboto', sans-serif;
+
+    hr {
+      width: 100%;
+      margin: 30px 0;
+    }
   }
 `;
 
@@ -24,15 +29,21 @@ export const HeaderStyle = styled.header`
   justify-content: space-between;
   align-items: center;
   height: 50px;
+  margin-left: 250px;
 `;
 
 export const Title = styled.span`
+  display: inline-block;
   color: ${SecondFont};
   font-size: 26px;
   border-bottom: 5px solid ${SecondFont};
   padding-bottom: 5px;
+  margin: 30px 50px;
 `;
 
-export const ContentArea = styled.div`
-  padding: 30px 50px;
+export const ContentArea = styled.section`
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
