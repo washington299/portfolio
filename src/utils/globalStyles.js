@@ -56,8 +56,12 @@ export const Title = styled.span`
 export const ContentArea = styled.section`
   padding: 0 30px;
   display: flex;
-  flex-direction: column;
+  flex-direction: ${(props => props.flexDirection || 'row')};
   align-items: center;
+
+  @media only screen and (max-width: 700px) {
+    padding: 0 10px;
+  }
 `;
 
 export const FooterStyle = styled.footer`

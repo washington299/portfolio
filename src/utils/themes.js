@@ -19,3 +19,8 @@ export const SecondFont = theme('mode', {
   light: '#1e90ff',
   dark: '#00FFFF',
 });
+
+export const thirdBackground = theme('mode', {
+  light: '#dce7f2',
+  dark: '#00000F',
+});

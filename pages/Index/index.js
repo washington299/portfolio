@@ -17,7 +17,7 @@ const HomePage = () => (
         <Header />
         <Styles>
           <Title>Myself</Title>
-          <ContentArea>
+          <ContentArea flexDirection="column">
             <div className="home-img">
               <img src="assets/avatar-light.png" alt="avatar-light" />
             </div>
