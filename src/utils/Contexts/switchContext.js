@@ -1,11 +1,19 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState, useContext, useEffect } from 'react';
 import Cookies from 'js-cookie';
 
-const ThemeContext = createContext('light');
+const ThemeContext = createContext();
+
+function getInitialColor() {
+  const storagedColor = Cookies.get('mode');
+  return storagedColor || 'light';
+}
 
 export default function ThemeProvider({ children }) {
-  const storagedColor = Cookies.get('mode');
-  const [colorTheme, setColorTheme] = useState(storagedColor || 'light');
+  const [colorTheme, setColorTheme] = useState(getInitialColor);
+
+  useEffect(() => {
+    Cookies.set('mode', colorTheme);
+  }, [colorTheme]);
 
   return (
     <ThemeContext.Provider value={{ colorTheme, setColorTheme }}>

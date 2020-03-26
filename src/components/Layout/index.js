@@ -4,7 +4,6 @@ import { useRouter } from 'next/router';
 import { ThemeProvider } from 'styled-components';
 
 import Sidebar from '../Sidebar';
-import SidebarProvider from '../../utils/Contexts/menuContext';
 import { useTheme } from '../../utils/Contexts/switchContext';
 
 import GlobalStyles from '../../utils/globalStyles';
@@ -27,13 +26,13 @@ const Layout = ({ title, children }) => {
         <title>{`Washington Campos - ${title}`}</title>
       </Head>
       <ThemeProvider theme={{ mode: colorTheme }}>
-        <SidebarProvider>
+        <>
           <GlobalStyles />
           <App>
             <Sidebar path={router.pathname} />
             {children}
           </App>
-        </SidebarProvider>
+        </>
       </ThemeProvider>
     </div>
   );
