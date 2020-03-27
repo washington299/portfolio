@@ -9,19 +9,19 @@ import Footer from '../../src/components/Footer';
 
 import Data from '../../src/utils/projectData';
 
-import { PageStyle, Title, ContentArea } from '../../src/utils/globalStyles';
+import { PagePosition, Title, ContentArea } from '../../src/utils/globalStyles';
 import Styles from './styles';
 
 const projects = () => (
   <Global>
     <Layout title="Projects">
-      <PageStyle>
+      <PagePosition>
         <Header />
+        <Title>
+          Projects
+          <MdLibraryBooks />
+        </Title>
         <Styles>
-          <Title>
-            Projects
-            <MdLibraryBooks />
-          </Title>
           <ContentArea>
             <div className="project-area">
               {Data.projectsData.map(({ id, title, img, link }) => (
@@ -48,7 +48,7 @@ const projects = () => (
           </ContentArea>
         </Styles>
         <Footer />
-      </PageStyle>
+      </PagePosition>
     </Layout>
   </Global>
 );

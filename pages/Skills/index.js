@@ -8,19 +8,19 @@ import Footer from '../../src/components/Footer';
 
 import Data from '../../src/utils/projectData';
 
-import { PageStyle, Title, ContentArea } from '../../src/utils/globalStyles';
+import { PagePosition, Title, ContentArea } from '../../src/utils/globalStyles';
 import Styles from './styles';
 
 const Skills = () => (
   <Global>
     <Layout title="Skills">
-      <PageStyle>
+      <PagePosition>
         <Header />
+        <Title>
+          Skills
+          <FaPencilRuler />
+        </Title>
         <Styles>
-          <Title>
-            Skills
-            <FaPencilRuler />
-          </Title>
           <ContentArea flexDirection="column">
             <div className="skills-area">
               {Data.skillsData.map(({ id, title, img }) => (
@@ -53,7 +53,7 @@ const Skills = () => (
           </ContentArea>
         </Styles>
         <Footer />
-      </PageStyle>
+      </PagePosition>
     </Layout>
   </Global>
 );

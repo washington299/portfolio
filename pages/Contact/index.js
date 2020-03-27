@@ -8,7 +8,7 @@ import Header from '../../src/components/Header';
 import Footer from '../../src/components/Footer';
 
 import {
-  PageStyle,
+  PagePosition,
   Title,
   ContentArea,
   Error,
@@ -25,13 +25,13 @@ const Contact = () => {
   return (
     <Global>
       <Layout title="Contact me">
-        <PageStyle>
+        <PagePosition>
           <Header />
+          <Title>
+            Contact Me
+            <MdContactMail />
+          </Title>
           <Styles>
-            <Title>
-              Contact Me
-              <MdContactMail />
-            </Title>
             <ContentArea style={{ justifyContent: 'center' }}>
               <Form>
                 <div className="form-area">
@@ -82,7 +82,7 @@ const Contact = () => {
             </ContentArea>
           </Styles>
           <Footer />
-        </PageStyle>
+        </PagePosition>
       </Layout>
     </Global>
   );

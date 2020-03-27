@@ -17,7 +17,7 @@ const Sidebar = ({ path }) => {
       <ul>
         <Link href="/">
           <li className={path === '/' ? 'active-router' : ''}>
-            <a>HOME</a>
+            <a>MYSELF</a>
           </li>
         </Link>
         <Link href="/projects">

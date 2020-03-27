@@ -14,19 +14,19 @@ import Layout from '../../src/components/Layout';
 import Header from '../../src/components/Header';
 import Footer from '../../src/components/Footer';
 
-import { PageStyle, Title, ContentArea } from '../../src/utils/globalStyles';
+import { PagePosition, Title, ContentArea } from '../../src/utils/globalStyles';
 import Styles from './styles';
 
 const HomePage = () => (
   <Global>
     <Layout title="Home">
-      <PageStyle>
+      <PagePosition>
         <Header />
+        <Title>
+          Myself
+          <FaUser />
+        </Title>
         <Styles>
-          <Title>
-            Myself
-            <FaUser />
-          </Title>
           <ContentArea flexDirection="column">
             <div className="home-img">
               <img src="assets/avatar-light.png" alt="avatar-light" />
@@ -74,7 +74,7 @@ const HomePage = () => (
           </ContentArea>
         </Styles>
         <Footer />
-      </PageStyle>
+      </PagePosition>
     </Layout>
   </Global>
 );

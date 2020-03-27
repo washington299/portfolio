@@ -1,6 +1,10 @@
-/* eslint-disable prettier/prettier */
 import styled, { createGlobalStyle } from 'styled-components';
-import { defaultBackground, defaultFont, SecondFont, secondBackground } from './themes';
+import {
+  defaultBackground,
+  defaultFont,
+  SecondFont,
+  secondBackground,
+} from './themes';
 
 export default createGlobalStyle`
   html, body {
@@ -20,7 +24,7 @@ export default createGlobalStyle`
   }
 `;
 
-export const PageStyle = styled.div`
+export const PagePosition = styled.div`
   flex: 1;
   margin-left: 250px;
 
@@ -68,10 +72,10 @@ export const Title = styled.span`
 `;
 
 export const ContentArea = styled.section`
-  padding: 0 30px;
   display: flex;
-  flex-direction: ${(props => props.flexDirection || 'row')};
+  flex-direction: ${props => props.flexDirection || 'row'};
   align-items: center;
+  padding: 0 30px;
 
   @media only screen and (max-width: 700px) {
     padding: 0 10px;
@@ -79,16 +83,16 @@ export const ContentArea = styled.section`
 `;
 
 export const FooterStyle = styled.footer`
-  height: 50px;
-  margin-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 50px;
+  margin-top: 30px;
   background-color: ${secondBackground};
 `;
 
 export const Error = styled.span`
-  color: #FF0000;
+  color: #ff0000;
   font-size: 15px;
   font-weight: 600;
   margin-top: 5px;
