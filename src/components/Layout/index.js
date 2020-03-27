@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
-import Cookies from 'js-cookie';
 import { useRouter } from 'next/router';
+import Cookies from 'js-cookie';
 import { ThemeProvider } from 'styled-components';
 
 import Sidebar from '../Sidebar';
 import { useTheme } from '../../utils/Contexts/switchContext';
 
 import GlobalStyles from '../../utils/globalStyles';
-import App from './styles';
+import LayoutStyle from './styles';
 
 const Layout = ({ title, children }) => {
   const router = useRouter();
@@ -30,11 +30,11 @@ const Layout = ({ title, children }) => {
         />
         <title>{`Washington Campos - ${title}`}</title>
       </Head>
-      <App>
+      <LayoutStyle>
         <GlobalStyles />
         <Sidebar path={router.pathname} />
         {children}
-      </App>
+      </LayoutStyle>
     </ThemeProvider>
   );
 };
