@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
+import Cookies from 'js-cookie';
 import { useRouter } from 'next/router';
 import { ThemeProvider } from 'styled-components';
 
@@ -13,8 +14,12 @@ const Layout = ({ title, children }) => {
   const router = useRouter();
   const { colorTheme } = useTheme();
 
+  useEffect(() => {
+    Cookies.set('mode', colorTheme, { expires: 1 });
+  }, [colorTheme]);
+
   return (
-    <div>
+    <ThemeProvider theme={{ mode: colorTheme }}>
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -25,16 +30,12 @@ const Layout = ({ title, children }) => {
         />
         <title>{`Washington Campos - ${title}`}</title>
       </Head>
-      <ThemeProvider theme={{ mode: colorTheme }}>
-        <>
-          <GlobalStyles />
-          <App>
-            <Sidebar path={router.pathname} />
-            {children}
-          </App>
-        </>
-      </ThemeProvider>
-    </div>
+      <App>
+        <GlobalStyles />
+        <Sidebar path={router.pathname} />
+        {children}
+      </App>
+    </ThemeProvider>
   );
 };
 

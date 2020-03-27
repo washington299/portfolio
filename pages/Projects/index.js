@@ -6,7 +6,7 @@ import Layout from '../../src/components/Layout';
 import Header from '../../src/components/Header';
 import Footer from '../../src/components/Footer';
 
-import projectsData from '../../src/utils/projectData';
+import Data from '../../src/utils/projectData';
 
 import { PageStyle, Title, ContentArea } from '../../src/utils/globalStyles';
 import Styles from './styles';
@@ -20,22 +20,24 @@ const projects = () => (
           <Title>Projects</Title>
           <ContentArea>
             <div className="project-area">
-              {projectsData.map(({ id, title, img, link }) => (
+              {Data.projectsData.map(({ id, title, img, link }) => (
                 <div className="project-box" key={id}>
-                  <div className="project-box__background">
-                    <div className="project-info">
-                      <img src={img} alt={title} />
-                      <a
-                        className="project-link"
-                        href={link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <span className="project-title">{title}</span>
-                        <FaGithub />
-                      </a>
+                  <a
+                    className="project-link"
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="project-box__background">
+                      <div className="project-info">
+                        <img src={img} alt={title} />
+                        <div className="project-span-area">
+                          <span className="project-title">{title}</span>
+                          <FaGithub />
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
               ))}
             </div>
