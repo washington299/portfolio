@@ -32,6 +32,7 @@ const Skills = () => (
             </div>
             <hr />
           </ContentArea>
+          <Title>Studying</Title>
           <ContentArea>
             <div className="skills-area">
               {Data.studyData.map(({ id, title, img }) => (
