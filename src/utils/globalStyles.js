@@ -72,3 +72,10 @@ export const FooterStyle = styled.footer`
   align-items: center;
   background-color: ${secondBackground};
 `;
+
+export const Error = styled.span`
+  color: #FF0000;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 5px;
+`;
