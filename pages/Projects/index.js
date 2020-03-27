@@ -1,11 +1,11 @@
 import React from 'react';
-import { FaGithub } from 'react-icons/fa';
 import { MdLibraryBooks } from 'react-icons/md';
 
 import Global from '../../src/components/SwitchProvider';
 import Layout from '../../src/components/Layout';
 import Header from '../../src/components/Header';
 import Footer from '../../src/components/Footer';
+import Box from '../../src/components/Box';
 
 import Data from '../../src/utils/projectData';
 
@@ -25,24 +25,7 @@ const projects = () => (
           <ContentArea>
             <div className="project-area">
               {Data.projectsData.map(({ id, title, img, link }) => (
-                <div className="project-box" key={id}>
-                  <a
-                    className="project-link"
-                    href={link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div className="project-box__background">
-                      <div className="project-info">
-                        <img src={img} alt={title} />
-                        <div className="project-span-area">
-                          <span className="project-title">{title}</span>
-                          <FaGithub />
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
+                <Box key={id} title={title} img={img} link={link} />
               ))}
             </div>
           </ContentArea>

@@ -10,6 +10,7 @@ import Data from '../../src/utils/projectData';
 
 import { PagePosition, Title, ContentArea } from '../../src/utils/globalStyles';
 import Styles from './styles';
+import Box from '../../src/components/Box';
 
 const Skills = () => (
   <Global>
@@ -23,15 +24,8 @@ const Skills = () => (
         <Styles>
           <ContentArea flexDirection="column">
             <div className="skills-area">
-              {Data.skillsData.map(({ id, title, img }) => (
-                <div className="skills-box" key={id}>
-                  <div className="skills-box__background">
-                    <div className="skills-info">
-                      <img src={img} alt={title} />
-                      <span className="skills-title">{title}</span>
-                    </div>
-                  </div>
-                </div>
+              {Data.skillsData.map(({ id, title, img, link }) => (
+                <Box key={id} title={title} img={img} link={link} />
               ))}
             </div>
             <hr />
@@ -39,15 +33,8 @@ const Skills = () => (
           <Title>Studying</Title>
           <ContentArea>
             <div className="skills-area">
-              {Data.studyData.map(({ id, title, img }) => (
-                <div className="skills-box" key={id}>
-                  <div className="skills-box__background">
-                    <div className="skills-info">
-                      <img src={img} alt={title} />
-                      <span className="skills-title">{title}</span>
-                    </div>
-                  </div>
-                </div>
+              {Data.studyData.map(({ id, title, img, link }) => (
+                <Box key={id} title={title} img={img} link={link} />
               ))}
             </div>
           </ContentArea>
