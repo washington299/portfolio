@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { MdContactMail } from 'react-icons/md';
 
 import Global from '../../src/components/SwitchProvider';
 import Layout from '../../src/components/Layout';
@@ -27,7 +28,10 @@ const Contact = () => {
         <PageStyle>
           <Header />
           <Styles>
-            <Title>Contact Me</Title>
+            <Title>
+              Contact Me
+              <MdContactMail />
+            </Title>
             <ContentArea style={{ justifyContent: 'center' }}>
               <Form>
                 <div className="form-area">

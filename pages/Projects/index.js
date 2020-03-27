@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
+import { MdLibraryBooks } from 'react-icons/md';
 
 import Global from '../../src/components/SwitchProvider';
 import Layout from '../../src/components/Layout';
@@ -17,7 +18,10 @@ const projects = () => (
       <PageStyle>
         <Header />
         <Styles>
-          <Title>Projects</Title>
+          <Title>
+            Projects
+            <MdLibraryBooks />
+          </Title>
           <ContentArea>
             <div className="project-area">
               {Data.projectsData.map(({ id, title, img, link }) => (

@@ -74,9 +74,6 @@ export default styled.div`
       }
     }
   }
-  @media only screen and (max-width: 700px) {
-    text-align: center;
-  }
   @media only screen and (max-width: 450px) {
     .project-area {
       .project-box {

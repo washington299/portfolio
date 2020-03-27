@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaPencilRuler } from 'react-icons/fa';
 
 import Global from '../../src/components/SwitchProvider';
 import Layout from '../../src/components/Layout';
@@ -16,7 +17,10 @@ const Skills = () => (
       <PageStyle>
         <Header />
         <Styles>
-          <Title>Skills</Title>
+          <Title>
+            Skills
+            <FaPencilRuler />
+          </Title>
           <ContentArea flexDirection="column">
             <div className="skills-area">
               {Data.skillsData.map(({ id, title, img }) => (

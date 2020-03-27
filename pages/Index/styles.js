@@ -45,8 +45,6 @@ export default styled.div`
   }
 
   @media only screen and (max-width: 700px) {
-    text-align: center;
-
     .home-star span {
       width: 100px;
     }

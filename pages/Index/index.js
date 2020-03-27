@@ -1,6 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-import { FaStar, FaHtml5, FaCss3Alt, FaReact, FaNodeJs } from 'react-icons/fa';
+import {
+  FaUser,
+  FaStar,
+  FaHtml5,
+  FaCss3Alt,
+  FaReact,
+  FaNodeJs,
+} from 'react-icons/fa';
 
 import Global from '../../src/components/SwitchProvider';
 import Layout from '../../src/components/Layout';
@@ -16,7 +23,10 @@ const HomePage = () => (
       <PageStyle>
         <Header />
         <Styles>
-          <Title>Myself</Title>
+          <Title>
+            Myself
+            <FaUser />
+          </Title>
           <ContentArea flexDirection="column">
             <div className="home-img">
               <img src="assets/avatar-light.png" alt="avatar-light" />

@@ -48,8 +48,22 @@ export const Title = styled.span`
   padding-bottom: 5px;
   margin: 30px 50px;
 
+  svg {
+    display: none;
+  }
+
   @media only screen and (max-width: 700px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    border: none;
+
+    svg {
+      display: block;
+      margin-left: 10px;
+      font-size: 25px;
+    }
   }
 `;
 
