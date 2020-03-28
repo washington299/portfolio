@@ -33,17 +33,6 @@ export const PagePosition = styled.div`
   }
 `;
 
-export const HeaderStyle = styled.header`
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 50px;
-
-  @media only screen and (max-width: 700px) {
-    justify-content: space-between;
-  }
-`;
-
 export const Title = styled.span`
   display: inline-block;
   color: ${SecondFont};

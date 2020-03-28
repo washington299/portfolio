@@ -4,8 +4,7 @@ import Switch from 'react-switch';
 import MenuMobile from '../MenuMobile';
 import { useTheme } from '../../utils/Contexts/switchContext';
 
-import { HeaderStyle } from '../../utils/globalStyles';
-import SwitchIconAreaStyle from './styles';
+import { HeaderStyle, SwitchIcon, ColorText } from './styles';
 
 const Header = () => {
   const { colorTheme, setColorTheme } = useTheme();
@@ -17,8 +16,8 @@ const Header = () => {
   return (
     <HeaderStyle>
       <MenuMobile />
-      <SwitchIconAreaStyle>
-        <span>Light</span>
+      <SwitchIcon>
+        <ColorText>Light</ColorText>
         <Switch
           onChange={changeTheme}
           checked={colorTheme !== 'light'}
@@ -29,8 +28,8 @@ const Header = () => {
           offHandleColor="#000000"
           onHandleColor="#FFFFFF"
         />
-        <span>Dark</span>
-      </SwitchIconAreaStyle>
+        <ColorText>Dark</ColorText>
+      </SwitchIcon>
     </HeaderStyle>
   );
 };
