@@ -5,7 +5,7 @@ import Global from '../../src/components/App';
 import Layout from '../../src/components/Layout';
 import Box from '../../src/components/Box';
 
-import Data from '../../src/utils/projectData';
+import Data from '../../src/utils/Data';
 
 import {
   Title,
