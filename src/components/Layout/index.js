@@ -9,8 +9,8 @@ import Header from '../Header';
 import Footer from '../Footer';
 import { useTheme } from '../../utils/Contexts/switchContext';
 
-import GlobalStyle from '../../utils/Global/GlobalStyle';
-import { PagePosition } from '../../utils/Global/GlobalStyleComponents';
+import GlobalStyle from '../../utils/Styles/Global';
+import { PagePosition } from '../../utils/Styles/Elements';
 import LayoutStyle from './styles';
 
 const Layout = ({ title, children }) => {

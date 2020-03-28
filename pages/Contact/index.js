@@ -5,11 +5,7 @@ import { MdContactMail } from 'react-icons/md';
 import Global from '../../src/components/App';
 import Layout from '../../src/components/Layout';
 
-import {
-  Title,
-  ContentArea,
-  Error,
-} from '../../src/utils/Global/GlobalStyleComponents';
+import { Title, ContentArea, Error } from '../../src/utils/Styles/Elements';
 import { Styles, Form } from './styles';
 
 const Contact = () => {
