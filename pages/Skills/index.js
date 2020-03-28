@@ -8,7 +8,7 @@ import Box from '../../src/components/Box';
 import Data from '../../src/utils/Data';
 
 import { Title, ContentArea } from '../../src/utils/Styles/Elements';
-import Styles from './styles';
+import { SkillsArea } from './styles';
 
 const Skills = () => (
   <Global>
@@ -17,24 +17,22 @@ const Skills = () => (
         Skills
         <FaPencilRuler />
       </Title>
-      <Styles>
-        <ContentArea flexDirection="column">
-          <div className="skills-area">
-            {Data.skillsData.map(({ id, title, img, link }) => (
-              <Box key={id} title={title} img={img} link={link} />
-            ))}
-          </div>
-          <hr />
-        </ContentArea>
-        <Title>Studying</Title>
-        <ContentArea>
-          <div className="skills-area">
-            {Data.studyData.map(({ id, title, img, link }) => (
-              <Box key={id} title={title} img={img} link={link} />
-            ))}
-          </div>
-        </ContentArea>
-      </Styles>
+      <ContentArea flexDirection="column">
+        <SkillsArea>
+          {Data.skillsData.map(({ id, title, img, link }) => (
+            <Box key={id} title={title} img={img} link={link} />
+          ))}
+        </SkillsArea>
+        <hr />
+      </ContentArea>
+      <Title>Studying</Title>
+      <ContentArea>
+        <SkillsArea>
+          {Data.studyData.map(({ id, title, img, link }) => (
+            <Box key={id} title={title} img={img} link={link} />
+          ))}
+        </SkillsArea>
+      </ContentArea>
     </Layout>
   </Global>
 );
