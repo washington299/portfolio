@@ -63,7 +63,7 @@ export const BoxTitle = styled.div`
   display: flex;
   justify-content: center;
 
-  div {
+  span {
     font-size: 18px;
   }
   svg {

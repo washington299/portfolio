@@ -1,11 +1,12 @@
-import styled from 'styled-components';
+/* eslint-disable prettier/prettier */
+import styled, { css } from 'styled-components';
 import {
   secondBackground,
   SecondFont,
   defaultBackground,
 } from '../../utils/themes';
 
-export default styled.nav`
+export const SidebarStyle = styled.nav`
   width: 250px;
   height: 100%;
   background-color: ${secondBackground};
@@ -13,59 +14,59 @@ export default styled.nav`
   z-index: 1;
   position: fixed;
 
-  .avatar-img {
-    width: 130px;
-    height: 130px;
-    margin: auto;
-    padding: 50px 0;
-
-    img {
-      width: 100%;
-    }
-  }
-
-  ul,
-  li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    cursor: pointer;
-  }
-  .active-router {
-    background-color: ${defaultBackground};
-    border-left: 7px solid ${SecondFont};
-  }
-  li {
-    text-align: center;
-    padding: 20px 0;
-    font-weight: 600;
-
-    &:hover {
-      background-color: ${defaultBackground};
-    }
-
-    a {
-      color: ${SecondFont};
-      text-decoration: none;
-    }
-  }
-
-  .social-media-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    margin-top: 100px;
-    text-align: center;
-
-    svg {
-      color: ${SecondFont};
-      font-size: 25px;
-      margin: 0 10px;
-    }
-  }
-
   @media only screen and (max-width: 700px) {
     display: ${props => props.display};
+  }
+`;
+
+export const Avatar = styled.div`
+  width: 130px;
+  height: 130px;
+  margin: auto;
+  padding: 50px 0;
+
+  img {
+    width: 100%;
+  }
+`;
+
+export const Menu = styled.ul`
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  cursor: pointer;
+`;
+
+export const MenuItem = styled.li`
+  ${props => props.active && css`
+    background-color: ${defaultBackground};
+    border-left: 8px solid ${SecondFont};
+  `}
+
+  text-align: center;
+  padding: 20px 0;
+  font-weight: 600;
+
+  &:hover {
+    background-color: ${defaultBackground};
+  }
+  a {
+    color: ${SecondFont};
+    text-decoration: none;
+  }
+`;
+
+export const Icons = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-top: 100px;
+  text-align: center;
+
+  svg {
+    color: ${SecondFont};
+    font-size: 25px;
+    margin: 0 10px;
   }
 `;

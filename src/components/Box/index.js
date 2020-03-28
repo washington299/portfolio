@@ -6,11 +6,11 @@ import { BoxStyle, Link, BoxArea, BoxInfo, BoxTitle } from './styles';
 const Box = ({ title, img, link }) => (
   <BoxStyle>
     <Link href={link} target="_blank" rel="noopener noreferrer">
-      <BoxArea className="box__background">
-        <BoxInfo className="box-info">
+      <BoxArea>
+        <BoxInfo>
           <img src={img} alt={title} />
-          <BoxTitle className="box-span-area">
-            <span className="box-title">{title}</span>
+          <BoxTitle>
+            <span>{title}</span>
             <FaGithub />
           </BoxTitle>
         </BoxInfo>

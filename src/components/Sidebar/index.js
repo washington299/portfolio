@@ -4,39 +4,39 @@ import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 import { useOpenSidebar } from '../../utils/Contexts/menuContext';
 
-import Navbar from './styles';
+import { SidebarStyle, Avatar, Menu, MenuItem, Icons } from './styles';
 
 const Sidebar = ({ path }) => {
   const { openSidebar } = useOpenSidebar();
 
   return (
-    <Navbar display={openSidebar ? 'block' : 'none'}>
-      <div className="avatar-img">
+    <SidebarStyle display={openSidebar ? 'block' : 'none'}>
+      <Avatar>
         <img src="/assets/avatar-light.png" alt="avatar-light.png" />
-      </div>
-      <ul>
+      </Avatar>
+      <Menu>
         <Link href="/">
-          <li className={path === '/' ? 'active-router' : ''}>
+          <MenuItem active={path === '/'}>
             <a>MYSELF</a>
-          </li>
+          </MenuItem>
         </Link>
         <Link href="/projects">
-          <li className={path === '/projects' ? 'active-router' : ''}>
+          <MenuItem active={path === '/projects'}>
             <a>PROJECTS</a>
-          </li>
+          </MenuItem>
         </Link>
         <Link href="/skills">
-          <li className={path === '/skills' ? 'active-router' : ''}>
+          <MenuItem active={path === '/skills'}>
             <a>SKILLS</a>
-          </li>
+          </MenuItem>
         </Link>
         <Link href="/contact">
-          <li className={path === '/contact' ? 'active-router' : ''}>
+          <MenuItem active={path === '/contact'}>
             <a>CONTACT</a>
-          </li>
+          </MenuItem>
         </Link>
-      </ul>
-      <div className="social-media-icons">
+      </Menu>
+      <Icons>
         <a
           href="https://www.instagram.com/washington_campos9/"
           target="_blank"
@@ -58,8 +58,8 @@ const Sidebar = ({ path }) => {
         >
           <FaGithub />
         </a>
-      </div>
-    </Navbar>
+      </Icons>
+    </SidebarStyle>
   );
 };
 
