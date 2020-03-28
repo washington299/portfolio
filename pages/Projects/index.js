@@ -8,7 +8,7 @@ import Box from '../../src/components/Box';
 import Data from '../../src/utils/Data';
 
 import { Title, ContentArea } from '../../src/utils/Styles/Elements';
-import Styles from './styles';
+import { ProjectsArea } from './styles';
 
 const projects = () => (
   <Global>
@@ -17,15 +17,13 @@ const projects = () => (
         Projects
         <MdLibraryBooks />
       </Title>
-      <Styles>
-        <ContentArea>
-          <div className="project-area">
-            {Data.projectsData.map(({ id, title, img, link }) => (
-              <Box key={id} title={title} img={img} link={link} />
-            ))}
-          </div>
-        </ContentArea>
-      </Styles>
+      <ContentArea>
+        <ProjectsArea>
+          {Data.projectsData.map(({ id, title, img, link }) => (
+            <Box key={id} title={title} img={img} link={link} />
+          ))}
+        </ProjectsArea>
+      </ContentArea>
     </Layout>
   </Global>
 );
