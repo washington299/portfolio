@@ -6,7 +6,7 @@ import Global from '../../src/components/App';
 import Layout from '../../src/components/Layout';
 
 import { Title, ContentArea, Error } from '../../src/utils/Styles/Elements';
-import { Styles, Form } from './styles';
+import { Form, FieldArea, Label, Input, TextArea, Button } from './styles';
 
 const Contact = () => {
   const { register, handleSubmit, errors } = useForm();
@@ -22,56 +22,55 @@ const Contact = () => {
           Contact Me
           <MdContactMail />
         </Title>
-        <Styles>
-          <ContentArea style={{ justifyContent: 'center' }}>
-            <Form>
-              <div className="form-area">
-                <div className="form--input-area">
-                  <label htmlFor="name">Name:</label>
-                  <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    placeholder="Nome"
-                    ref={register({ required: true })}
-                  />
-                  {errors.name && errors.name.type === 'required' && (
-                    <Error>Campo obrigatório!</Error>
-                  )}
-                </div>
-                <div className="form--input-area">
-                  <label htmlFor="email">E-mail:</label>
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Seu melhor e-mail"
-                    ref={register({ required: true })}
-                  />
-                  {errors.email && errors.email.type === 'required' && (
-                    <Error>Campo obrigatório!</Error>
-                  )}
-                </div>
-                <div className="form--input-area">
-                  <label htmlFor="textarea">Mensagem:</label>
-                  <textarea
-                    type="text"
-                    name="textarea"
-                    id="textarea"
-                    placeholder="Digite sua mensagem aqui..."
-                    ref={register({ required: true })}
-                  />
-                  {errors.textarea && errors.textarea.type === 'required' && (
-                    <Error>Campo obrigatório!</Error>
-                  )}
-                  <button type="submit" onClick={handleSubmit(submit)}>
-                    Enviar
-                  </button>
-                </div>
-              </div>
-            </Form>
-          </ContentArea>
-        </Styles>
+        <ContentArea style={{ justifyContent: 'center' }}>
+          <Form>
+            <FieldArea>
+              <Label htmlFor="name">Name:</Label>
+              <Input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Nome"
+                ref={register({ required: true })}
+              />
+              {errors.name && errors.name.type === 'required' && (
+                <Error>Campo obrigatório!</Error>
+              )}
+            </FieldArea>
+
+            <FieldArea>
+              <Label htmlFor="email">E-mail:</Label>
+              <Input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Seu melhor e-mail"
+                ref={register({ required: true })}
+              />
+              {errors.email && errors.email.type === 'required' && (
+                <Error>Campo obrigatório!</Error>
+              )}
+            </FieldArea>
+
+            <FieldArea>
+              <Label htmlFor="textarea">Mensagem:</Label>
+              <TextArea
+                type="text"
+                name="textarea"
+                id="textarea"
+                placeholder="Digite sua mensagem aqui..."
+                ref={register({ required: true })}
+              />
+              {errors.textarea && errors.textarea.type === 'required' && (
+                <Error>Campo obrigatório!</Error>
+              )}
+            </FieldArea>
+
+            <Button type="submit" onClick={handleSubmit(submit)}>
+              Enviar
+            </Button>
+          </Form>
+        </ContentArea>
       </Layout>
     </Global>
   );
