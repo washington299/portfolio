@@ -9,7 +9,8 @@ import Header from '../Header';
 import Footer from '../Footer';
 import { useTheme } from '../../utils/Contexts/switchContext';
 
-import GlobalStyles, { PagePosition } from '../../utils/globalStyles';
+import GlobalStyle from '../../utils/Global/GlobalStyle';
+import { PagePosition } from '../../utils/Global/GlobalStyleComponents';
 import LayoutStyle from './styles';
 
 const Layout = ({ title, children }) => {
@@ -32,7 +33,7 @@ const Layout = ({ title, children }) => {
         />
         <title>{`Washington Campos - ${title}`}</title>
       </Head>
-      <GlobalStyles />
+      <GlobalStyle />
       <LayoutStyle>
         <Sidebar path={router.pathname} />
         <PagePosition>

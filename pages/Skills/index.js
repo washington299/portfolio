@@ -7,7 +7,10 @@ import Box from '../../src/components/Box';
 
 import Data from '../../src/utils/projectData';
 
-import { Title, ContentArea } from '../../src/utils/globalStyles';
+import {
+  Title,
+  ContentArea,
+} from '../../src/utils/Global/GlobalStyleComponents';
 import Styles from './styles';
 
 const Skills = () => (

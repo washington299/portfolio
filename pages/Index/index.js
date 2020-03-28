@@ -12,7 +12,10 @@ import {
 import Global from '../../src/components/App';
 import Layout from '../../src/components/Layout';
 
-import { Title, ContentArea } from '../../src/utils/globalStyles';
+import {
+  Title,
+  ContentArea,
+} from '../../src/utils/Global/GlobalStyleComponents';
 import Styles from './styles';
 
 const HomePage = () => (

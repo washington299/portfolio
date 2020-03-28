@@ -1,28 +1,5 @@
-import styled, { createGlobalStyle } from 'styled-components';
-import {
-  defaultBackground,
-  defaultFont,
-  SecondFont,
-  secondBackground,
-} from './themes';
-
-export default createGlobalStyle`
-  html, body {
-    margin: 0;
-    padding: 0;
-    box-shadow: border-box;
-  }
-  body {
-    background-color: ${defaultBackground};
-    color: ${defaultFont};
-    font-family: 'Roboto', sans-serif;
-
-    hr {
-      width: 100%;
-      margin: 30px 0;
-    }
-  }
-`;
+import styled from 'styled-components';
+import { SecondFont, secondBackground } from '../themes';
 
 export const PagePosition = styled.div`
   flex: 1;
