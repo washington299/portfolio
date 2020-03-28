@@ -1,52 +1,56 @@
 import styled from 'styled-components';
 import { defaultFont, SecondFont } from '../../src/utils/themes';
 
-export default styled.div`
-  .home-introduction {
-    margin: 15px 0;
-    font-size: 20px;
-    text-align: center;
+export const Avatar = styled.div``;
+
+export const Intro = styled.span`
+  margin: 15px 0;
+  font-size: 20px;
+  text-align: center;
+`;
+
+export const Star = styled.div`
+  display: flex;
+  align-items: center;
+
+  span {
+    width: 150px;
+    height: 4px;
+    background-color: ${defaultFont};
   }
-  .home-star {
-    display: flex;
-    align-items: center;
-
-    span {
-      width: 150px;
-      height: 4px;
-      background-color: ${defaultFont};
-    }
-    svg {
-      font-size: 25px;
-      margin: 0 10px;
-    }
-  }
-  .home-techs {
-    display: flex;
-    align-items: center;
-    margin-top: 15px;
-
-    .tech {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 0 10px;
-
-      svg {
-        font-size: 30px;
-        margin-bottom: 5px;
-      }
-    }
-  }
-
-  article a {
-    color: ${SecondFont};
-    text-decoration: none;
+  svg {
+    font-size: 25px;
+    margin: 0 10px;
   }
 
   @media only screen and (max-width: 700px) {
-    .home-star span {
+    span {
       width: 100px;
     }
+  }
+`;
+
+export const Stack = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+`;
+
+export const Tech = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+
+  svg {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+`;
+
+export const Article = styled.article`
+  a {
+    text-decoration: none;
+    color: ${SecondFont};
   }
 `;
