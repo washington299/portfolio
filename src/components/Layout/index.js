@@ -5,9 +5,11 @@ import Cookies from 'js-cookie';
 import { ThemeProvider } from 'styled-components';
 
 import Sidebar from '../Sidebar';
+import Header from '../Header';
+import Footer from '../Footer';
 import { useTheme } from '../../utils/Contexts/switchContext';
 
-import GlobalStyles from '../../utils/globalStyles';
+import GlobalStyles, { PagePosition } from '../../utils/globalStyles';
 import LayoutStyle from './styles';
 
 const Layout = ({ title, children }) => {
@@ -30,10 +32,14 @@ const Layout = ({ title, children }) => {
         />
         <title>{`Washington Campos - ${title}`}</title>
       </Head>
+      <GlobalStyles />
       <LayoutStyle>
-        <GlobalStyles />
         <Sidebar path={router.pathname} />
-        {children}
+        <PagePosition>
+          <Header />
+          {children}
+          <Footer />
+        </PagePosition>
       </LayoutStyle>
     </ThemeProvider>
   );
