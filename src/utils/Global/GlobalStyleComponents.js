@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { SecondFont, secondBackground } from '../themes';
+import { SecondFont } from '../themes';
 
 export const PagePosition = styled.div`
   flex: 1;
@@ -46,15 +46,6 @@ export const ContentArea = styled.section`
   @media only screen and (max-width: 700px) {
     padding: 0 10px;
   }
-`;
-
-export const FooterStyle = styled.footer`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  margin-top: 30px;
-  background-color: ${secondBackground};
 `;
 
 export const Error = styled.span`
