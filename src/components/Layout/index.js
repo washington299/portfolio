@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 import Cookies from 'js-cookie';
 import { ThemeProvider } from 'styled-components';
 
@@ -14,7 +13,6 @@ import { PagePosition } from '../../utils/Styles/Elements';
 import LayoutStyle from './styles';
 
 const Layout = ({ title, children }) => {
-  const router = useRouter();
   const { colorTheme } = useTheme();
 
   useEffect(() => {
@@ -35,7 +33,7 @@ const Layout = ({ title, children }) => {
       </Head>
       <GlobalStyle />
       <LayoutStyle>
-        <Sidebar path={router.pathname} />
+        <Sidebar />
         <PagePosition>
           <Header />
           {children}

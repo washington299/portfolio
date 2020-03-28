@@ -1,12 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 import { useOpenSidebar } from '../../utils/Contexts/menuContext';
 
 import { SidebarStyle, Avatar, Menu, MenuItem, Icons } from './styles';
 
-const Sidebar = ({ path }) => {
+const Sidebar = () => {
+  const router = useRouter();
+  const { pathname } = router;
   const { openSidebar } = useOpenSidebar();
 
   return (
@@ -16,22 +19,22 @@ const Sidebar = ({ path }) => {
       </Avatar>
       <Menu>
         <Link href="/">
-          <MenuItem active={path === '/'}>
+          <MenuItem active={pathname === '/'}>
             <a>MYSELF</a>
           </MenuItem>
         </Link>
         <Link href="/projects">
-          <MenuItem active={path === '/projects'}>
+          <MenuItem active={pathname === '/projects'}>
             <a>PROJECTS</a>
           </MenuItem>
         </Link>
         <Link href="/skills">
-          <MenuItem active={path === '/skills'}>
+          <MenuItem active={pathname === '/skills'}>
             <a>SKILLS</a>
           </MenuItem>
         </Link>
         <Link href="/contact">
-          <MenuItem active={path === '/contact'}>
+          <MenuItem active={pathname === '/contact'}>
             <a>CONTACT</a>
           </MenuItem>
         </Link>
