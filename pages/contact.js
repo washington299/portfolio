@@ -2,8 +2,15 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { MdContactMail } from 'react-icons/md';
 
-import { Title, ContentArea, Error } from '../../src/utils/Styles/Elements';
-import { Form, FieldArea, Label, Input, TextArea, Button } from './styles';
+import { Title, ContentArea, Error } from '../src/utils/Styles/Elements';
+import {
+  Form,
+  FieldArea,
+  Label,
+  Input,
+  TextArea,
+  Button,
+} from '../src/utils/Styles/contact-style';
 
 const Contact = () => {
   const { register, handleSubmit, errors } = useForm();

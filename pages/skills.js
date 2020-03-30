@@ -1,12 +1,12 @@
 import React from 'react';
 import { FaPencilRuler } from 'react-icons/fa';
 
-import Box from '../../src/components/Box';
+import Box from '../src/components/Box';
 
-import Data from '../../src/utils/Data';
+import Data from '../src/utils/Data';
 
-import { Title, ContentArea } from '../../src/utils/Styles/Elements';
-import { SkillsArea } from './styles';
+import { Title, ContentArea } from '../src/utils/Styles/Elements';
+import { SkillsArea } from '../src/utils/Styles/skills-style';
 
 const Skills = () => (
   <>
