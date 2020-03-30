@@ -9,6 +9,8 @@ import Footer from '../src/components/Footer';
 import light from '../src/utils/Themes/light';
 import dark from '../src/utils/Themes/dark';
 
+import SidebarProvider from '../src/utils/Contexts/menuContext';
+
 import GlobalStyle from '../src/utils/Styles/Global';
 import { PagePosition } from '../src/utils/Styles/Elements';
 
@@ -27,12 +29,14 @@ function MyApp({ Component, pageProps }) {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <div>
-          <Sidebar />
-          <PagePosition>
-            <Header toggleTheme={toggleTheme} />
-            <Component {...pageProps} />
-            <Footer />
-          </PagePosition>
+          <SidebarProvider>
+            <Sidebar />
+            <PagePosition>
+              <Header toggleTheme={toggleTheme} />
+              <Component {...pageProps} />
+              <Footer />
+            </PagePosition>
+          </SidebarProvider>
         </div>
       </ThemeProvider>
     </>
