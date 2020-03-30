@@ -64,7 +64,7 @@ export default {
     },
     {
       id: 4,
-      img: '/assets/skills/NextJs.png',
+      img: '/assets/skills/nextJs.png',
       title: 'NextJs',
       link: 'https://nextjs.org/',
     },
