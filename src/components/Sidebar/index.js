@@ -10,7 +10,11 @@ import { SidebarStyle, Avatar, Menu, MenuItem, Icons } from './styles';
 const Sidebar = () => {
   const router = useRouter();
   const { pathname } = router;
-  const { openSidebar } = useOpenSidebar();
+  const { openSidebar, setOpenSidebar } = useOpenSidebar();
+
+  function closeSidebar() {
+    setOpenSidebar(false);
+  }
 
   return (
     <SidebarStyle display={openSidebar ? 'block' : 'none'}>
@@ -19,22 +23,22 @@ const Sidebar = () => {
       </Avatar>
       <Menu>
         <Link href="/">
-          <MenuItem active={pathname === '/'}>
+          <MenuItem active={pathname === '/'} onClick={closeSidebar}>
             <a>MYSELF</a>
           </MenuItem>
         </Link>
         <Link href="/projects">
-          <MenuItem active={pathname === '/projects'}>
+          <MenuItem active={pathname === '/projects'} onClick={closeSidebar}>
             <a>PROJECTS</a>
           </MenuItem>
         </Link>
         <Link href="/skills">
-          <MenuItem active={pathname === '/skills'}>
+          <MenuItem active={pathname === '/skills'} onClick={closeSidebar}>
             <a>SKILLS</a>
           </MenuItem>
         </Link>
         <Link href="/contact">
-          <MenuItem active={pathname === '/contact'}>
+          <MenuItem active={pathname === '/contact'} onClick={closeSidebar}>
             <a>CONTACT</a>
           </MenuItem>
         </Link>
