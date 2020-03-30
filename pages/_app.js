@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <div>
+        <>
           <SidebarProvider>
             <Sidebar />
             <PagePosition>
@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps }) {
               <Footer />
             </PagePosition>
           </SidebarProvider>
-        </div>
+        </>
       </ThemeProvider>
     </>
   );
