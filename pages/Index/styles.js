@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { defaultFont, SecondFont } from '../../src/utils/themes';
 
 export const Avatar = styled.div``;
 
@@ -16,7 +15,7 @@ export const Star = styled.div`
   span {
     width: 150px;
     height: 4px;
-    background-color: ${defaultFont};
+    background-color: ${({ theme }) => theme.colors.font.primary};
   }
   svg {
     font-size: 25px;
@@ -51,6 +50,6 @@ export const Tech = styled.div`
 export const Article = styled.article`
   a {
     text-decoration: none;
-    color: ${SecondFont};
+    color: ${({ theme }) => theme.colors.font.secondary};
   }
 `;

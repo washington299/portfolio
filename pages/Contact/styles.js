@@ -1,10 +1,4 @@
 import styled from 'styled-components';
-import {
-  defaultBackground,
-  defaultFont,
-  SecondFont,
-  secondBackground,
-} from '../../src/utils/themes';
 
 export const Form = styled.form`
   width: 100%;
@@ -29,8 +23,8 @@ export const Label = styled.label`
 
 export const Input = styled.input`
   width: 100%;
-  color: ${defaultFont};
-  background-color: ${defaultBackground};
+  color: ${({ theme }) => theme.colors.font.primary};
+  background-color: ${({ theme }) => theme.colors.background.primary};
   border: none;
   padding: 10px 0;
   font-size: 16px;
@@ -52,8 +46,8 @@ export const Button = styled.button`
   max-width: 600px;
   padding: 10px 0;
   margin-top: 20px;
-  background-color: ${SecondFont};
-  color: ${secondBackground};
+  background-color: ${({ theme }) => theme.colors.font.secondary};
+  color: ${({ theme }) => theme.colors.background.secondary};
   border: none;
   font-size: 16px;
   font-weight: 600;
