@@ -1,10 +1,4 @@
 import styled from 'styled-components';
-import {
-  SecondFont,
-  defaultFont,
-  secondBackground,
-  thirdBackground,
-} from '../../utils/themes';
 
 export const BoxStyle = styled.div`
   width: 33%;
@@ -19,7 +13,7 @@ export const BoxStyle = styled.div`
 
 export const Link = styled.a`
   text-decoration: none;
-  color: ${defaultFont};
+  color: ${({ theme }) => theme.colors.font.primary};
 
   :hover {
     text-decoration: underline;
@@ -28,13 +22,13 @@ export const Link = styled.a`
 
 export const BoxArea = styled.div`
   margin: 10px;
-  background-color: ${secondBackground};
+  background-color: ${({ theme }) => theme.colors.background.secondary};
   border-radius: 10px;
   cursor: pointer;
 
   :hover {
-    background-color: ${thirdBackground};
-    border: 1px solid ${SecondFont};
+    background-color: ${({ theme }) => theme.colors.background.tertiary};
+    border: 1px solid ${({ theme }) => theme.colors.font.secondary};
     border-radius: 10px;
   }
 `;
@@ -53,7 +47,7 @@ export const BoxInfo = styled.div`
     border-radius: 5px;
 
     :hover {
-      background-color: ${thirdBackground};
+      background-color: ${({ theme }) => theme.colors.background.tertiary};
       border: none;
     }
   }
@@ -69,6 +63,6 @@ export const BoxTitle = styled.div`
   svg {
     font-size: 23px;
     margin-left: 10px;
-    color: ${defaultFont};
+    color: ${({ theme }) => theme.colors.font.primary};
   }
 `;

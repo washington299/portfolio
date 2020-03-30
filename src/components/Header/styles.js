@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { defaultFont } from '../../utils/themes';
 
 export const HeaderStyle = styled.header`
   display: flex;
@@ -20,7 +19,7 @@ export const SwitchIcon = styled.div`
 `;
 
 export const ColorText = styled.span`
-  color: ${defaultFont};
+  color: ${({ theme }) => theme.colors.font.primary};
   font-weight: 600;
   margin: 0 10px;
 `;

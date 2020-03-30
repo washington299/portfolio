@@ -1,15 +1,10 @@
 /* eslint-disable prettier/prettier */
 import styled, { css } from 'styled-components';
-import {
-  secondBackground,
-  SecondFont,
-  defaultBackground,
-} from '../../utils/themes';
 
 export const SidebarStyle = styled.nav`
   width: 250px;
   height: 100%;
-  background-color: ${secondBackground};
+  background-color: ${({ theme }) => theme.colors.background.secondary};
   box-shadow: 1px 0 3px #aaa;
   z-index: 1;
   position: fixed;
@@ -39,8 +34,8 @@ export const Menu = styled.ul`
 
 export const MenuItem = styled.li`
   ${props => props.active && css`
-    background-color: ${defaultBackground};
-    border-left: 8px solid ${SecondFont};
+    background-color: ${({ theme }) => theme.colors.background.primary};
+    border-left: 8px solid ${({ theme }) => theme.colors.font.secondary};
   `}
 
   text-align: center;
@@ -48,10 +43,10 @@ export const MenuItem = styled.li`
   font-weight: 600;
 
   &:hover {
-    background-color: ${defaultBackground};
+    background-color: ${({ theme }) => theme.colors.background.primary};
   }
   a {
-    color: ${SecondFont};
+    color: ${({ theme }) => theme.colors.font.secondary};
     text-decoration: none;
   }
 `;
@@ -65,7 +60,7 @@ export const Icons = styled.div`
   text-align: center;
 
   svg {
-    color: ${SecondFont};
+    color: ${({ theme }) => theme.colors.font.secondary};
     font-size: 25px;
     margin: 0 10px;
   }

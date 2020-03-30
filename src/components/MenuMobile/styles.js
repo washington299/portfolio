@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { SecondFont } from '../../utils/themes';
 
 export default styled.div`
   width: 50px;
@@ -14,7 +13,7 @@ export default styled.div`
   span {
     width: 40px;
     height: 4px;
-    background-color: ${SecondFont};
+    background-color: ${({ theme }) => theme.colors.font.secondary};
   }
 
   @media only screen and (max-width: 700px) {
