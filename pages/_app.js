@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import React, { useState } from 'react';
+import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
 import Sidebar from '../src/components/Sidebar';
@@ -10,12 +10,13 @@ import light from '../src/utils/Themes/light';
 import dark from '../src/utils/Themes/dark';
 
 import SidebarProvider from '../src/utils/Contexts/menuContext';
+import useStorageTheme from '../src/utils/useStorageTheme';
 
 import GlobalStyle from '../src/utils/Styles/Global';
 import { PagePosition } from '../src/utils/Styles/Elements';
 
 function MyApp({ Component, pageProps }) {
-  const [theme, setTheme] = useState(light);
+  const [theme, setTheme] = useStorageTheme('theme', light);
 
   function toggleTheme() {
     setTheme(theme.title === 'light' ? dark : light);
