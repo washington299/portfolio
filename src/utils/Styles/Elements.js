@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { SecondFont } from '../themes';
 
 export const PagePosition = styled.div`
   flex: 1;
@@ -12,9 +11,9 @@ export const PagePosition = styled.div`
 
 export const Title = styled.span`
   display: inline-block;
-  color: ${SecondFont};
+  color: ${({ theme }) => theme.colors.font.secondary};
   font-size: 26px;
-  border-bottom: 5px solid ${SecondFont};
+  border-bottom: 5px solid ${({ theme }) => theme.colors.font.secondary};
   padding-bottom: 5px;
   margin: 30px 50px;
 

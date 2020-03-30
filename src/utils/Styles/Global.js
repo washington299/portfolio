@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import { defaultBackground, defaultFont } from '../themes';
 
 export default createGlobalStyle`
   html, body {
@@ -8,8 +7,8 @@ export default createGlobalStyle`
     box-shadow: border-box;
   }
   body {
-    background-color: ${defaultBackground};
-    color: ${defaultFont};
+    background-color: ${({ theme }) => theme.colors.background.primary};
+    color: ${({ theme }) => theme.colors.font.primary};
     font-family: 'Roboto', sans-serif;
 
     hr {
