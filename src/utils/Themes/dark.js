@@ -1,5 +1,4 @@
 export default {
-  title: 'dark',
   colors: {
     font: {
       primary: '#FFFFFF',
