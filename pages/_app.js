@@ -50,12 +50,10 @@ function MyApp({ Component, pageProps, storagedDarkMode = false }) {
   );
 }
 
-export async function getServerSideProps({ req }) {
-  const cookies = parseCookies(req);
+MyApp.getInitialProps = ({ ctx }) => {
+  const cookies = parseCookies(ctx.req);
 
-  return {
-    props: { storagedDarkMode: cookies.darkMode },
-  };
-}
+  return { storagedDarkMode: cookies.darkMode };
+};
 
 export default MyApp;
