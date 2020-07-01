@@ -10,14 +10,7 @@ import {
 } from 'react-icons/fa';
 
 import { Title, ContentArea } from '../utils/Styles/Elements';
-import {
-  Avatar,
-  Intro,
-  Star,
-  Stack,
-  Tech,
-  Article,
-} from '../utils/Styles/index-style';
+import { Intro, Star, Stack, Tech, Article } from '../utils/Styles/index-style';
 
 const HomePage = () => (
   <>
@@ -26,9 +19,9 @@ const HomePage = () => (
       <FaUser />
     </Title>
     <ContentArea flexDirection="column">
-      <Avatar>
+      <div>
         <img src="assets/avatar-light.png" alt="avatar-light" />
-      </Avatar>
+      </div>
       <Intro>
         Hey there, i&apos;m Washington a Junior Javascript developer.
       </Intro>

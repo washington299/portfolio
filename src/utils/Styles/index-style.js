@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-export const Avatar = styled.div``;
-
 export const Intro = styled.span`
   margin: 15px 0;
   font-size: 20px;
