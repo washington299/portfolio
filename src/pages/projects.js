@@ -1,12 +1,12 @@
 import React from 'react';
 import { MdLibraryBooks } from 'react-icons/md';
 
-import Box from '../src/components/Box';
+import Box from '../components/Box';
 
-import Data from '../src/utils/Data';
+import Data from '../utils/Data';
 
-import { Title, ContentArea } from '../src/utils/Styles/Elements';
-import { ProjectsArea } from '../src/utils/Styles/projects-style';
+import { Title, ContentArea } from '../utils/Styles/Elements';
+import { ProjectsArea } from '../utils/Styles/projects-style';
 
 const projects = () => (
   <>

@@ -3,19 +3,19 @@ import React, { useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
 import { ThemeProvider } from 'styled-components';
 
-import { parseCookies } from '../src/utils/parseCookies';
+import { parseCookies } from '../utils/parseCookies';
 
-import Sidebar from '../src/components/Sidebar';
-import Header from '../src/components/Header';
-import Footer from '../src/components/Footer';
+import Sidebar from '../components/Sidebar';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
-import light from '../src/utils/Themes/light';
-import dark from '../src/utils/Themes/dark';
+import light from '../utils/Themes/light';
+import dark from '../utils/Themes/dark';
 
-import SidebarProvider from '../src/utils/Contexts/menuContext';
+import SidebarProvider from '../utils/Contexts/menuContext';
 
-import GlobalStyle from '../src/utils/Styles/Global';
-import { PagePosition } from '../src/utils/Styles/Elements';
+import GlobalStyle from '../utils/Styles/Global';
+import { PagePosition } from '../utils/Styles/Elements';
 
 function MyApp({ Component, pageProps, storagedDarkMode = false }) {
   const [darkMode, setDarkMode] = useState(() => JSON.parse(storagedDarkMode));
