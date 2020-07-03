@@ -1,14 +1,13 @@
 import React from 'react';
+import axios from 'axios';
 import { MdLibraryBooks } from 'react-icons/md';
 
 import Box from '../components/Box';
 
-import Data from '../utils/Data';
-
 import { Title, ContentArea } from '../utils/Styles/Elements';
 import { ProjectsArea } from '../utils/Styles/projects-style';
 
-const projects = () => (
+const projects = ({ projectsData }) => (
   <>
     <Title>
       Projects
@@ -16,12 +15,18 @@ const projects = () => (
     </Title>
     <ContentArea>
       <ProjectsArea>
-        {Data.projectsData.map(({ id, title, img, link }) => (
+        {projectsData.map(({ id, title, img, link }) => (
           <Box key={id} title={title} img={img} link={link} />
         ))}
       </ProjectsArea>
     </ContentArea>
   </>
 );
+
+export const getStaticProps = async () => {
+  const { data } = await axios.get('http://localhost:3000/api/projects');
+  const projectsData = data;
+  return { props: { projectsData } };
+};
 
 export default projects;
