@@ -15,7 +15,7 @@ import dark from '../utils/Themes/dark';
 import SidebarProvider from '../utils/Contexts/menuContext';
 
 import GlobalStyle from '../utils/Styles/Global';
-import { PagePosition } from '../utils/Styles/Elements';
+import { GridArea, PagePosition } from '../utils/Styles/Elements';
 
 function MyApp({ Component, pageProps, storagedDarkMode = false }) {
   const [darkMode, setDarkMode] = useState(() => JSON.parse(storagedDarkMode));
@@ -34,17 +34,17 @@ function MyApp({ Component, pageProps, storagedDarkMode = false }) {
         <title>Portfólio</title>
       </Head>
       <ThemeProvider theme={darkMode ? dark : light}>
-        <>
-          <GlobalStyle />
-          <SidebarProvider>
+        <GlobalStyle />
+        <SidebarProvider>
+          <GridArea>
             <Sidebar />
             <PagePosition>
               <Header toggleTheme={toggleTheme} checked={darkMode} />
               <Component {...pageProps} />
               <Footer />
             </PagePosition>
-          </SidebarProvider>
-        </>
+          </GridArea>
+        </SidebarProvider>
       </ThemeProvider>
     </>
   );

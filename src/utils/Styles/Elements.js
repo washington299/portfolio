@@ -1,11 +1,16 @@
 import styled from 'styled-components';
 
+export const GridArea = styled.div`
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+`;
+
 export const PagePosition = styled.div`
-  flex: 1;
-  margin-left: 250px;
+  grid-column: 2 / 3;
 
   @media only screen and (max-width: 700px) {
-    margin-left: 0;
+    grid-column: 1 / 3;
   }
 `;
 

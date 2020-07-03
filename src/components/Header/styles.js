@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const HeaderStyle = styled.header`
+  height: 70px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 50px;
 
   @media only screen and (max-width: 700px) {
     justify-content: space-between;

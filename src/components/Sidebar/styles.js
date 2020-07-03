@@ -2,15 +2,16 @@
 import styled, { css } from 'styled-components';
 
 export const SidebarStyle = styled.nav`
+  grid-column: 1 / 2;
   width: 250px;
   height: 100%;
   background-color: ${({ theme }) => theme.colors.background.secondary};
   box-shadow: 1px 0 3px #aaa;
   z-index: 1;
-  position: fixed;
 
   @media only screen and (max-width: 700px) {
     display: ${props => props.display};
+    position: fixed;
   }
 `;
 
