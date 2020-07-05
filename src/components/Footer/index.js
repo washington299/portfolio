@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FooterStyle } from './styles';
+import { FooterStyle } from 'components/Footer/styles';
 
 const Footer = () => (
   <FooterStyle>© Copyright - Todos os direitos reservados.</FooterStyle>

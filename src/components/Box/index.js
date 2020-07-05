@@ -1,7 +1,13 @@
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
 
-import { BoxStyle, Link, BoxArea, BoxInfo, BoxTitle } from './styles';
+import {
+  BoxStyle,
+  Link,
+  BoxArea,
+  BoxInfo,
+  BoxTitle,
+} from 'components/Box/styles';
 
 const Box = ({ title, img, link }) => (
   <BoxStyle>

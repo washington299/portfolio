@@ -1,9 +1,9 @@
 import React from 'react';
 import Switch from 'react-switch';
 
-import MenuMobile from '../MenuMobile';
+import MenuMobile from 'components/MenuMobile';
 
-import { HeaderStyle, SwitchIcon, ColorText } from './styles';
+import { HeaderStyle, SwitchIcon, ColorText } from 'components/Header/styles';
 
 const Header = ({ toggleTheme, checked }) => (
   <HeaderStyle>

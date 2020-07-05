@@ -9,8 +9,8 @@ import {
   FaNodeJs,
 } from 'react-icons/fa';
 
-import { Title, ContentArea } from '../utils/Styles/Elements';
-import { Intro, Star, Stack, Tech, Article } from '../utils/Styles/index-style';
+import { Title, ContentArea } from 'utils/Styles/Elements';
+import { Intro, Star, Stack, Tech, Article } from 'utils/Styles/index-style';
 
 const HomePage = () => (
   <>

@@ -1,4 +1,4 @@
-import { studyData } from '../../utils/Data';
+import { studyData } from 'utils/Data';
 
 export default (req, res) => {
   if (req.method !== 'GET') {

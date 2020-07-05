@@ -1,4 +1,4 @@
-import { skillsData } from '../../utils/Data';
+import { skillsData } from 'utils/Data';
 
 export default (req, res) => {
   if (req.method !== 'GET') {

@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { MdContactMail } from 'react-icons/md';
 
-import { Title, ContentArea, Error } from '../utils/Styles/Elements';
+import { Title, ContentArea, Error } from 'utils/Styles/Elements';
 import {
   Form,
   FieldArea,
@@ -10,7 +10,7 @@ import {
   Input,
   TextArea,
   Button,
-} from '../utils/Styles/contact-style';
+} from 'utils/Styles/contact-style';
 
 const Contact = () => {
   const { register, handleSubmit, errors } = useForm();

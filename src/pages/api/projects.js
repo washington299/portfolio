@@ -1,4 +1,4 @@
-import { projectsData } from '../../utils/Data';
+import { projectsData } from 'utils/Data';
 
 export default (req, res) => {
   if (req.method !== 'GET') {

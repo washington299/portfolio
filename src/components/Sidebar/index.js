@@ -3,9 +3,15 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
-import { useOpenSidebar } from '../../utils/Contexts/menuContext';
+import { useOpenSidebar } from 'utils/Contexts/menuContext';
 
-import { SidebarStyle, Avatar, Menu, MenuItem, Icons } from './styles';
+import {
+  SidebarStyle,
+  Avatar,
+  Menu,
+  MenuItem,
+  Icons,
+} from 'components/Sidebar/styles';
 
 const Sidebar = () => {
   const router = useRouter();
