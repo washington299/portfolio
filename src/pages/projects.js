@@ -24,7 +24,7 @@ const projects = ({ projectsData }) => (
 );
 
 export const getStaticProps = async () => {
-  const { data } = await axios.get('http://localhost:3000/api/projects');
+  const { data } = await axios.get(`${process.env.SITE_URL}/projects`);
   const projectsData = data;
   return { props: { projectsData } };
 };
