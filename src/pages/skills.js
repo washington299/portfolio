@@ -32,7 +32,7 @@ const Skills = ({ skillsData, studyData }) => (
   </>
 );
 
-export const getStaticProps = async () => {
+Skills.getInitialProps = async () => {
   const skillsData = axios.get(`${process.env.SITE_URL}/skills`);
   const studyData = axios.get(`${process.env.SITE_URL}/study`);
   const [skills, study] = await Promise.all([skillsData, studyData]);
