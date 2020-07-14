@@ -13,7 +13,6 @@ export default styled.div`
   span {
     width: 40px;
     height: 4px;
-    background-color: ${({ theme }) => theme.colors.font.secondary};
   }
 
   @media only screen and (max-width: 700px) {

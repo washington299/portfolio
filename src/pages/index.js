@@ -26,9 +26,9 @@ const HomePage = () => (
         Hey there, i&apos;m Washington a Junior Javascript developer.
       </Intro>
       <Star>
-        <span />
+        <span className="line" />
         <FaStar />
-        <span />
+        <span className="line" />
       </Star>
       <Stack>
         <Tech>

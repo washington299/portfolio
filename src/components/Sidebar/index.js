@@ -23,28 +23,40 @@ const Sidebar = () => {
   }
 
   return (
-    <SidebarStyle display={openSidebar ? 'block' : 'none'}>
+    <SidebarStyle className="sidebar" display={openSidebar ? 'block' : 'none'}>
       <Avatar>
         <img src="/assets/avatar-light.png" alt="avatar-light.png" />
       </Avatar>
       <Menu>
         <Link href="/">
-          <MenuItem active={pathname === '/'} onClick={closeSidebar}>
+          <MenuItem
+            className={pathname === '/' ? 'active' : ''}
+            onClick={closeSidebar}
+          >
             <a>MYSELF</a>
           </MenuItem>
         </Link>
         <Link href="/projects">
-          <MenuItem active={pathname === '/projects'} onClick={closeSidebar}>
+          <MenuItem
+            className={pathname === '/projects' ? 'active' : ''}
+            onClick={closeSidebar}
+          >
             <a>PROJECTS</a>
           </MenuItem>
         </Link>
         <Link href="/skills">
-          <MenuItem active={pathname === '/skills'} onClick={closeSidebar}>
+          <MenuItem
+            className={pathname === '/skills' ? 'active' : ''}
+            onClick={closeSidebar}
+          >
             <a>SKILLS</a>
           </MenuItem>
         </Link>
         <Link href="/contact">
-          <MenuItem active={pathname === '/contact'} onClick={closeSidebar}>
+          <MenuItem
+            className={pathname === '/contact' ? 'active' : ''}
+            onClick={closeSidebar}
+          >
             <a>CONTACT</a>
           </MenuItem>
         </Link>

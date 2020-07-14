@@ -18,8 +18,9 @@ export const SwitchIcon = styled.div`
   margin-right: 15px;
 `;
 
-export const ColorText = styled.span`
-  color: ${({ theme }) => theme.colors.font.primary};
+export const ColorText = styled.span.attrs(() => ({
+  className: 'colorText',
+}))`
   font-weight: 600;
   margin: 0 10px;
 `;

@@ -1,11 +1,10 @@
 /* eslint-disable prettier/prettier */
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const SidebarStyle = styled.nav`
   grid-column: 1 / 2;
   width: 250px;
   height: 100%;
-  background-color: ${({ theme }) => theme.colors.background.secondary};
   box-shadow: 1px 0 3px #aaa;
   z-index: 1;
 
@@ -33,26 +32,17 @@ export const Menu = styled.ul`
   cursor: pointer;
 `;
 
-export const MenuItem = styled.li`
-  ${props => props.active && css`
-    background-color: ${({ theme }) => theme.colors.background.primary};
-    border-left: 8px solid ${({ theme }) => theme.colors.font.secondary};
-  `}
-
+export const MenuItem = styled.li.attrs(() => ({
+  className: 'menu-item',
+}))`
   text-align: center;
   padding: 20px 0;
   font-weight: 600;
-
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.background.primary};
-  }
-  a {
-    color: ${({ theme }) => theme.colors.font.secondary};
-    text-decoration: none;
-  }
 `;
 
-export const Icons = styled.div`
+export const Icons = styled.div.attrs(() => ({
+  className: 'icons',
+}))`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,7 +51,6 @@ export const Icons = styled.div`
   text-align: center;
 
   svg {
-    color: ${({ theme }) => theme.colors.font.secondary};
     font-size: 25px;
     margin: 0 10px;
   }

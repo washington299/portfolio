@@ -1,9 +1,7 @@
 import Head from 'next/head';
-import React, { useState, useEffect } from 'react';
-import Cookies from 'js-cookie';
+import React from 'react';
+import useDarkMode from 'use-dark-mode';
 import { ThemeProvider } from 'styled-components';
-
-import { parseCookies } from 'utils/parseCookies';
 
 import Sidebar from 'components/Sidebar';
 import Header from 'components/Header';
@@ -17,29 +15,21 @@ import SidebarProvider from 'utils/Contexts/menuContext';
 import GlobalStyle from 'utils/Styles/Global';
 import { GridArea, PagePosition } from 'utils/Styles/Elements';
 
-function MyApp({ Component, pageProps, storagedDarkMode = false }) {
-  const [darkMode, setDarkMode] = useState(() => JSON.parse(storagedDarkMode));
-
-  useEffect(() => {
-    Cookies.set('darkMode', JSON.stringify(darkMode));
-  }, [darkMode]);
-
-  function toggleTheme() {
-    setDarkMode(!darkMode);
-  }
+function MyApp({ Component, pageProps }) {
+  const darkMode = useDarkMode(false);
 
   return (
     <>
       <Head>
         <title>Portfólio</title>
       </Head>
-      <ThemeProvider theme={darkMode ? dark : light}>
+      <ThemeProvider theme={darkMode.value ? dark : light}>
         <GlobalStyle />
         <SidebarProvider>
           <GridArea>
             <Sidebar />
             <PagePosition>
-              <Header toggleTheme={toggleTheme} checked={darkMode} />
+              <Header toggleTheme={darkMode.toggle} checked={darkMode.value} />
               <Component {...pageProps} />
               <Footer />
             </PagePosition>
@@ -49,11 +39,5 @@ function MyApp({ Component, pageProps, storagedDarkMode = false }) {
     </>
   );
 }
-
-MyApp.getInitialProps = ({ ctx }) => {
-  const cookies = parseCookies(ctx.req);
-
-  return { storagedDarkMode: cookies.darkMode };
-};
 
 export default MyApp;

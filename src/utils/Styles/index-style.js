@@ -13,7 +13,6 @@ export const Star = styled.div`
   span {
     width: 150px;
     height: 4px;
-    background-color: ${({ theme }) => theme.colors.font.primary};
   }
   svg {
     font-size: 25px;

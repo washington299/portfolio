@@ -14,12 +14,12 @@ export const PagePosition = styled.div`
   }
 `;
 
-export const Title = styled.span`
+export const Title = styled.span.attrs(() => ({
+  className: 'title',
+}))`
   display: inline-block;
-  color: ${({ theme }) => theme.colors.font.secondary};
   font-size: 26px;
-  border-bottom: 5px solid ${({ theme }) => theme.colors.font.secondary};
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   margin: 30px 50px;
 
   svg {

@@ -9,9 +9,9 @@ const MenuMobile = () => {
 
   return (
     <MenuMobileStyles onClick={() => setOpenSidebar(!openSidebar)}>
-      <span />
-      <span />
-      <span />
+      <span className="line-mm" />
+      <span className="line-mm" />
+      <span className="line-mm" />
     </MenuMobileStyles>
   );
 };
