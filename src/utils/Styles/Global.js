@@ -47,6 +47,21 @@ export default createGlobalStyle`
     .line-mm {
       background-color: ${({ theme }) => theme.colors.font.secondary};
     }
+    .box-link {
+      color: ${({ theme }) => theme.colors.font.primary};
+    }
+    .box-area {
+      background-color: ${({ theme }) => theme.colors.background.secondary};
+
+      :hover {
+        background-color: ${({ theme }) => theme.colors.background.tertiary};
+        border: 1px solid ${({ theme }) => theme.colors.font.secondary};
+        border-radius: 10px;
+      }
+    }
+    .box-title svg {
+      color: ${({ theme }) => theme.colors.font.primary};
+    }
 
     hr {
       width: 100%;

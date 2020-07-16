@@ -11,26 +11,22 @@ export const BoxStyle = styled.div`
   }
 `;
 
-export const Link = styled.a`
+export const Link = styled.a.attrs(() => ({
+  className: 'box-link',
+}))`
   text-decoration: none;
-  color: ${({ theme }) => theme.colors.font.primary};
 
   :hover {
     text-decoration: underline;
   }
 `;
 
-export const BoxArea = styled.div`
+export const BoxArea = styled.div.attrs(() => ({
+  className: 'box-area',
+}))`
   margin: 10px;
-  background-color: ${({ theme }) => theme.colors.background.secondary};
   border-radius: 10px;
   cursor: pointer;
-
-  :hover {
-    background-color: ${({ theme }) => theme.colors.background.tertiary};
-    border: 1px solid ${({ theme }) => theme.colors.font.secondary};
-    border-radius: 10px;
-  }
 `;
 
 export const BoxInfo = styled.div`
@@ -53,7 +49,9 @@ export const BoxInfo = styled.div`
   }
 `;
 
-export const BoxTitle = styled.div`
+export const BoxTitle = styled.div.attrs(() => ({
+  className: 'box-title',
+}))`
   display: flex;
   justify-content: center;
 
@@ -63,6 +61,5 @@ export const BoxTitle = styled.div`
   svg {
     font-size: 23px;
     margin-left: 10px;
-    color: ${({ theme }) => theme.colors.font.primary};
   }
 `;
