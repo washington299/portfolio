@@ -4,68 +4,36 @@ export default createGlobalStyle`
   html, body {
     margin: 0;
     padding: 0;
-    box-shadow: border-box;
+    box-sizing: border-box
   }
   body {
     font-family: 'Roboto', sans-serif;
-    background-color: ${({ theme }) => theme.colors.background.primary};
-    color: ${({ theme }) => theme.colors.font.primary};
-
-    .active {
-      background-color: ${({ theme }) => theme.colors.background.primary};
-      border-left: 6px solid ${({ theme }) => theme.colors.font.secondary};
-    }
-
-    .sidebar, .footer {
-      background-color: ${({ theme }) => theme.colors.background.secondary};
-    }
-
-    .color-text {
-      color: ${({ theme }) => theme.colors.font.primary};
-    }
-
-    .menu-item {
-      a {
-        color: ${({ theme }) => theme.colors.font.secondary};
-        text-decoration: none;
-      }
-      &:hover {
-        background-color: ${({ theme }) => theme.colors.background.primary};
-      }
-    }
-    .icons svg {
-      color: ${({ theme }) => theme.colors.font.secondary};
-    }
-
-    .title {
-      color: ${({ theme }) => theme.colors.font.secondary};
-      border-bottom: 4px solid ${({ theme }) => theme.colors.font.secondary};
-    }
-    .line {
-      background-color: ${({ theme }) => theme.colors.font.primary};
-    }
-    .line-mm {
-      background-color: ${({ theme }) => theme.colors.font.secondary};
-    }
-    .box-link {
-      color: ${({ theme }) => theme.colors.font.primary};
-    }
-    .box-area {
-      background-color: ${({ theme }) => theme.colors.background.secondary};
-
-      :hover {
-        background-color: ${({ theme }) => theme.colors.background.tertiary};
-        border: 1px solid ${({ theme }) => theme.colors.font.secondary};
-        border-radius: 10px;
-      }
-    }
-    .box-title svg {
-      color: ${({ theme }) => theme.colors.font.primary};
-    }
+    background-color: var(--background-primary);
+    color: var(--font-primary);
 
     hr {
       width: 100%;
       margin: 30px 0;
     }
+
+    .active {
+      background-color: var(--background-primary);
+      border-left: 6px solid var(--font-secondary);
+    }
+    .line {
+      background-color: var(--font-primary);
+    }
+    .line-mm {
+      background-color: var(--font-secondary);;
+    }
+  }
+
+  :root {
+    --background-primary: ${({ theme }) => theme.colors.background.primary};
+    --background-secondary: ${({ theme }) => theme.colors.background.secondary};
+    --background-tertiary: ${({ theme }) => theme.colors.background.tertiary};
+
+    --font-primary: ${({ theme }) => theme.colors.font.primary};
+    --font-secondary: ${({ theme }) => theme.colors.font.secondary};
   }
 `;

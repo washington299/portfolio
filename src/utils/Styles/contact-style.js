@@ -23,8 +23,8 @@ export const Label = styled.label`
 
 export const Input = styled.input`
   width: 100%;
-  color: ${({ theme }) => theme.colors.font.primary};
-  background-color: ${({ theme }) => theme.colors.background.primary};
+  color: var(--font-primary);
+  background-color: var(--background-primary);
   border: none;
   padding: 10px 0;
   font-size: 16px;
@@ -46,8 +46,8 @@ export const Button = styled.button`
   max-width: 600px;
   padding: 10px 0;
   margin-top: 20px;
-  background-color: ${({ theme }) => theme.colors.font.secondary};
-  color: ${({ theme }) => theme.colors.background.secondary};
+  background-color: var(--font-secondary);
+  color: var(--background-secondary);
   border: none;
   font-size: 16px;
   font-weight: 600;

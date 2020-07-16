@@ -47,6 +47,6 @@ export const Tech = styled.div`
 export const Article = styled.article`
   a {
     text-decoration: none;
-    color: ${({ theme }) => theme.colors.font.secondary};
+    color: var(--font-secondary);
   }
 `;

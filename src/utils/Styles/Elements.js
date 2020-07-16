@@ -14,13 +14,13 @@ export const PagePosition = styled.div`
   }
 `;
 
-export const Title = styled.span.attrs(() => ({
-  className: 'title',
-}))`
+export const Title = styled.span`
   display: inline-block;
   font-size: 26px;
   padding-bottom: 10px;
   margin: 30px 50px;
+  color: var(--font-secondary);
+  border-bottom: 4px solid var(--font-secondary);
 
   svg {
     display: none;

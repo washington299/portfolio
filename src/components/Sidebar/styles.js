@@ -5,6 +5,7 @@ export const SidebarStyle = styled.nav`
   grid-column: 1 / 2;
   width: 250px;
   height: 100%;
+  background-color: var(--background-secondary);
   box-shadow: 1px 0 3px #aaa;
   z-index: 1;
 
@@ -32,17 +33,21 @@ export const Menu = styled.ul`
   cursor: pointer;
 `;
 
-export const MenuItem = styled.li.attrs(() => ({
-  className: 'menu-item',
-}))`
+export const MenuItem = styled.li`
   text-align: center;
   padding: 20px 0;
   font-weight: 600;
+
+  a {
+    color: var(--font-secondary);
+    text-decoration: none;
+  }
+  &:hover {
+    background-color: var(--background-primary);
+  }
 `;
 
-export const Icons = styled.div.attrs(() => ({
-  className: 'icons',
-}))`
+export const Icons = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,6 +56,7 @@ export const Icons = styled.div.attrs(() => ({
   text-align: center;
 
   svg {
+    color: var(--font-secondary);
     font-size: 25px;
     margin: 0 10px;
   }

@@ -23,7 +23,7 @@ const Sidebar = () => {
   }
 
   return (
-    <SidebarStyle className="sidebar" display={openSidebar ? 'block' : 'none'}>
+    <SidebarStyle display={openSidebar ? 'block' : 'none'}>
       <Avatar>
         <img src="/assets/avatar-light.png" alt="avatar-light.png" />
       </Avatar>
