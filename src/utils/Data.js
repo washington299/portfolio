@@ -41,6 +41,18 @@ export const projectsData = [
     title: 'CRUD React+Node',
     link: 'https://github.com/washington299/crud-with-ReactJs-and-NodeJs',
   },
+  {
+    id: 8,
+    img: '/assets/projects/WhatsApp-Clone.png',
+    title: 'WhatsApp Web Clone',
+    link: 'https://github.com/washington299/WhatsApp-Web-Layout-Clone',
+  },
+  {
+    id: 9,
+    img: '/assets/projects/ip-address-tracker-desktop.png',
+    title: 'Ip Address Tracker',
+    link: 'https://github.com/washington299/Ip-address-tracker',
+  },
 ];
 
 export const skillsData = [
@@ -84,9 +96,9 @@ export const skillsData = [
 
 export const studyData = [
   {
-    id: 1,
-    img: '/assets/skills/postgresql.jpeg',
-    title: 'PostgreSQL',
-    link: 'https://www.postgresql.org/',
+    // id: 1,
+    // img: '/assets/skills/postgresql.jpeg',
+    // title: 'PostgreSQL',
+    // link: 'https://www.postgresql.org/',
   },
 ];
