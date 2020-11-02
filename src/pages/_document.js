@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import Document, { Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
@@ -30,10 +30,9 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html lang="en">
+      <Html lang="en">
         <Head>
           <meta charSet="utf-8" />
-          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <link rel="icon" href="assets/avatar-light.png" />
           <link
             href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
@@ -48,7 +47,7 @@ export default class MyDocument extends Document {
           </div>
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }

@@ -21,6 +21,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <title>Portfólio</title>
       </Head>
       <ThemeProvider theme={darkMode.value ? dark : light}>

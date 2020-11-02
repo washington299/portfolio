@@ -1,13 +1,13 @@
 import React from 'react';
+import axios from 'axios';
 import { FaPencilRuler } from 'react-icons/fa';
 
-import { skillsData } from 'utils/Data';
 import Box from 'components/Box';
 
 import { Title, ContentArea } from 'utils/Styles/Elements';
 import { SkillsArea } from 'utils/Styles/skills-style';
 
-const Skills = () => (
+const Skills = ({ skills }) => (
   <>
     <Title>
       Skills
@@ -15,7 +15,7 @@ const Skills = () => (
     </Title>
     <ContentArea flexDirection="column">
       <SkillsArea>
-        {skillsData.map(({ id, title, img, link }) => (
+        {skills.map(({ id, title, img, link }) => (
           <Box key={id} title={title} img={img} link={link} />
         ))}
       </SkillsArea>
@@ -31,5 +31,14 @@ const Skills = () => (
     </ContentArea> */}
   </>
 );
+
+export const getStaticProps = async () => {
+  const res = await axios.get('http://localhost:3000/api/data', {
+    data: { data: 'skills' },
+  });
+  const skills = res.data;
+
+  return { props: { skills } };
+};
 
 export default Skills;
