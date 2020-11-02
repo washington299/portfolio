@@ -96,9 +96,9 @@ export const skillsData = [
 
 export const studyData = [
   {
-    // id: 1,
-    // img: '/assets/skills/postgresql.jpeg',
-    // title: 'PostgreSQL',
-    // link: 'https://www.postgresql.org/',
+    id: 1,
+    img: '/assets/skills/postgresql.jpeg',
+    title: 'PostgreSQL',
+    link: 'https://www.postgresql.org/',
   },
 ];

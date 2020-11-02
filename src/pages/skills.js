@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaPencilRuler } from 'react-icons/fa';
 
-import { skillsData, studyData } from 'utils/Data';
+import { skillsData } from 'utils/Data';
 import Box from 'components/Box';
 
 import { Title, ContentArea } from 'utils/Styles/Elements';
@@ -21,14 +21,14 @@ const Skills = () => (
       </SkillsArea>
       <hr />
     </ContentArea>
-    <Title>Studying</Title>
+    {/* <Title>Studying</Title>
     <ContentArea>
       <SkillsArea>
         {studyData.map(({ id, title, img, link }) => (
           <Box key={id} title={title} img={img} link={link} />
         ))}
       </SkillsArea>
-    </ContentArea>
+    </ContentArea> */}
   </>
 );
 
