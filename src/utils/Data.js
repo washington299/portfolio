@@ -53,6 +53,12 @@ export const projectsData = [
     title: 'Ip Address Tracker',
     link: 'https://github.com/washington299/Ip-address-tracker',
   },
+  {
+    id: 10,
+    img: '/assets/projects/rock-paper-scissors-desktop.png',
+    title: 'Rock, Paper, Scissors game',
+    link: 'https://github.com/washington299/rock-paper-scissors-game',
+  },
 ];
 
 export const skillsData = [
