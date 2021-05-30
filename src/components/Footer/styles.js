@@ -8,9 +8,12 @@ export const Footer = styled.footer`
   width: 100%;
   height: 50px;
 
+  background-color: var(--background-secondary);
+  margin-top: 30px;
   position: absolute;
   bottom: 0;
 
-  background-color: var(--background-secondary);
-  margin-top: 30px;
+  @media screen and (max-width: 500px) {
+    position: unset;
+  }
 `;
