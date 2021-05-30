@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { FooterStyle } from 'components/Footer/styles';
+import * as S from 'components/Footer/styles';
 
 const Footer = () => (
-  <FooterStyle>© Copyright - Todos os direitos reservados.</FooterStyle>
+  <S.Footer>© Copyright - Todos os direitos reservados.</S.Footer>
 );
 
 export default Footer;

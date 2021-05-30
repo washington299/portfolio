@@ -8,36 +8,26 @@ export const GridArea = styled.div`
 
 export const PagePosition = styled.div`
   grid-column: 2 / 3;
+  position: relative;
 
   @media only screen and (max-width: 700px) {
     grid-column: 1 / 3;
   }
 `;
 
-export const Title = styled.span`
-  display: inline-block;
+export const Title = styled.h1`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 26px;
-  padding-bottom: 10px;
-  margin: 30px 50px;
+  font-weight: 500;
+  text-align: center;
   color: var(--font-secondary);
-  border-bottom: 4px solid var(--font-secondary);
 
   svg {
-    display: none;
-  }
-
-  @media only screen and (max-width: 700px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border: none;
-
-    svg {
-      display: block;
-      margin-left: 10px;
-      font-size: 25px;
-    }
+    display: block;
+    margin-left: 10px;
+    font-size: 25px;
   }
 `;
 

@@ -10,6 +10,7 @@ export default createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     background-color: var(--background-primary);
     color: var(--font-primary);
+    overflow-x: hidden;
 
     hr {
       width: 100%;

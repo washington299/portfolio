@@ -1,65 +1,80 @@
 import React from 'react';
 import Link from 'next/link';
-import {
-  FaUser,
-  FaStar,
-  FaHtml5,
-  FaCss3Alt,
-  FaReact,
-  FaNodeJs,
-} from 'react-icons/fa';
 
 import { Title, ContentArea } from 'utils/Styles/Elements';
-import { Intro, Star, Stack, Tech, Article } from 'utils/Styles/index-style';
+
+import {
+  UserIcon,
+  StarIcon,
+  Html5Icon,
+  Css3Icon,
+  JavascriptIcon,
+  ReactIcon,
+  TypescriptIcon,
+  NextjsIcon,
+  AboutIcon,
+} from 'styles/icons';
+import { Intro, Draw, Line, Stack, Tech, Article } from 'styles/index-style';
 
 const HomePage = () => (
   <>
     <Title>
       Myself
-      <FaUser />
+      <UserIcon />
     </Title>
     <ContentArea flexDirection="column">
       <div>
         <img src="assets/avatar-light.png" alt="avatar-light" />
       </div>
-      <Intro>
-        Hey there, i&apos;m Washington a Junior Javascript developer.
-      </Intro>
-      <Star>
-        <span className="line" />
-        <FaStar />
-        <span className="line" />
-      </Star>
+      <Intro>Hey there, i&apos;m Washington a Front-end developer.</Intro>
+      <Draw>
+        <Line />
+        <StarIcon />
+        <Line />
+      </Draw>
       <Stack>
         <Tech>
-          <FaHtml5 />
+          <Html5Icon />
           <span>Html 5</span>
         </Tech>
         <Tech>
-          <FaCss3Alt />
+          <Css3Icon />
           <span>Css 3</span>
         </Tech>
         <Tech>
-          <FaReact />
+          <JavascriptIcon />
+          <span>Javascript</span>
+        </Tech>
+        <Tech>
+          <ReactIcon />
           <span>ReactJs</span>
         </Tech>
         <Tech>
-          <FaNodeJs />
-          <span>NodeJs</span>
+          <TypescriptIcon />
+          <span>Typescript</span>
+        </Tech>
+        <Tech>
+          <NextjsIcon />
+          <span>NextJs</span>
         </Tech>
       </Stack>
       <hr />
     </ContentArea>
-    <Title>About me</Title>
+    <Title>
+      About me
+      <AboutIcon />
+    </Title>
     <ContentArea>
       <Article>
-        I’m a young guy in love with programming, I’m a web JavaScript developer
-        and i make responsive layouts, I’m currently studying the frontend
-        framework ReactJs and NodeJs on the backend and I’m looking for an
-        opportunity to work as a internship or a junior developer with these
-        technologies. You can see my projects by
+        I’m a young guy in love with programming, I’m a Front-end developer with
+        a little experience in back-end development, i make responsive layouts,
+        and i always try to write the best code as possible, always folowing the
+        best standards and make the other developers easier. In my free time i
+        love learning new things and work with other developers that has the
+        same porpouse as me, i also have a couple of projects here in my
+        portfolio you can see them by
         <Link href="/projects">
-          <a> clicking here</a>
+          <a> clicking here.</a>
         </Link>
       </Article>
     </ContentArea>

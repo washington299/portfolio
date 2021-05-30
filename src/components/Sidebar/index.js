@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 import { useOpenSidebar } from 'utils/Contexts/menuContext';
 
+import { InstagramIcon, LinkedinIcon, GithubIcon } from 'styles/icons';
 import {
   SidebarStyle,
   Avatar,
@@ -67,21 +67,21 @@ const Sidebar = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaInstagram />
+          <InstagramIcon />
         </a>
         <a
           href="https://www.linkedin.com/in/washington-campos-741771162/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaLinkedin />
+          <LinkedinIcon />
         </a>
         <a
           href="https://github.com/washington299"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaGithub />
+          <GithubIcon />
         </a>
       </Icons>
     </SidebarStyle>
